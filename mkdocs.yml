@@ -1,12 +1,16 @@
 site_name: Interactive Handout
 
 theme:
+  feature:
+    tabs: true
   name: material
 
 docs_dir: content
 site_dir: docs
 
-site_url: http://localhost:8000
+site_url: https://insper.github.io/interactive-handout/
+repo_name: "Interactive Handout"
+repo_url: https://github.com/Insper/interactive-handout
 
 nav:
   - Home: index.md
