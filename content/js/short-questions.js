@@ -1,4 +1,5 @@
 {
+    // HACK: depends on mkdocs-material
     let style_short_questions = document.head.appendChild(document.createElement("style"));
     style_short_questions.innerText = `
     .admonition.question.short  input[type=text] {

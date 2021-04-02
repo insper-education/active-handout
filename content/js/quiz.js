@@ -7,6 +7,7 @@
         });
     }
 
+    // HACK: depends on pymdownx.tasklist and mkdocs-material (custom checkbox)
     let style_quiz = document.head.appendChild(document.createElement("style"));
     style_quiz.innerHTML = `
     input[type=checkbox].wrong-answer + .task-list-indicator::before {

@@ -4,3 +4,4 @@ extensions:
   - short-questions
   - progress-check
   - slides
+  - counter

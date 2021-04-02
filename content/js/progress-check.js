@@ -1,4 +1,5 @@
 {
+    // HACK: depends on mkdocs-material styles
     let style_progress = document.head.appendChild(document.createElement("style"));
     style_progress.innerText = `
     article input[type=button].checkpoint {

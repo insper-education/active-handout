@@ -1,5 +1,5 @@
 {
-    // HACK: mkdocs-material specific
+    // HACK: depends on mkdocs-material
     let home_link = document.querySelector(".md-header a.md-header-nav__button.md-logo");
     window.site_url = home_link.href;
     console.log(window.site_url + "config.yml");
