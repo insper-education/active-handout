@@ -11,6 +11,7 @@ site_dir: docs
 site_url: https://insper-education.github.io/interactive-handout/
 repo_name: "Interactive Handout"
 repo_url: https://github.com/insper-education/interactive-handout
+edit_uri: edit/main/content/
 
 nav:
   - Home: index.md
