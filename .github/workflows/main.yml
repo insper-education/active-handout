@@ -1,0 +1,46 @@
+name: ci
+on:
+  push
+  
+# Environment
+env:
+  CI: true
+  PYTHON_VERSION: 3.x
+
+# Jobs to run
+jobs:
+     
+  # Build and deploy documentation site
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+
+      # Checkout source form GitHub
+      - uses: actions/checkout@v2
+
+      # Install Python runtime and dependencies
+      - uses: actions/setup-python@v1
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      # pip
+      - run: |
+          pip install -r requirements.txt
+          pip install mkdocs-minify-plugin>=0.2
+          
+      # Set configuration for repository and deploy documentation
+      - env:
+          GH_TOKEN: ${{ secrets.mkdocs }}
+          GH_NAME: ci
+          GH_EMAIL: corsiferrao@gmail.com
+        run: |
+          REMOTE="https://${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}"
+          git config --global user.name "${GH_NAME}"
+          git config --global user.email "${GH_EMAIL}"
+          git remote set-url origin ${REMOTE}
+              
+      # deploy
+      - run: |
+          mkdocs gh-deploy --force
+          mkdocs --version
