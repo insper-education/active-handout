@@ -5,3 +5,10 @@ extensions:
   - progress-check
   - slides
   - counter
+
+config:
+  short-questions:
+      text: "Validat2e"
+  counter:
+    - question
+    - tip

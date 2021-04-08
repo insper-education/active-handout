@@ -6,7 +6,6 @@
     fetch(window.site_url + "config.yml").then((resp) => {
         return resp.text();
     }).then((text) => {
-        console.log(text);
         let obj = jsyaml.load(text);
         obj.extensions.forEach((ext) => {
             let scr = document.createElement("script");
@@ -15,6 +14,8 @@
 
             document.body.appendChild(scr);
         });
+
+        window.ihandout_config = obj.config;
     });
     
 }

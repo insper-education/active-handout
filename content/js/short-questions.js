@@ -30,6 +30,12 @@
 
 
     let document_addr = document.location.pathname;
+
+    let button_text = "Validate";
+    if (window.ihandout_config["short-questions"]) {
+        button_text = window.ihandout_config["short-questions"]["text"];
+    }
+
     let short_questions = document.querySelectorAll(".admonition.question.short");
     
     short_questions.forEach((item, k) => {
@@ -57,7 +63,7 @@
         } else {
             let validate_button = document.createElement("input");
             validate_button.type = "button";
-            validate_button.value = "Validar";
+            validate_button.value = button_text;
 
             answer_line.appendChild(text);
             answer_line.appendChild(validate_button);
