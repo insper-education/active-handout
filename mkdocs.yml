@@ -8,15 +8,15 @@ theme:
 docs_dir: content
 site_dir: docs
 
-site_url: https://insper.github.io/interactive-handout/
+site_url: https://insper-education.github.io/interactive-handout/
 repo_name: "Interactive Handout"
-repo_url: https://github.com/Insper/interactive-handout
+repo_url: https://github.com/insper-education/interactive-handout
 
 nav:
   - Home: index.md
-  - Examples:
-    - examples/lecture_plus_handout/index.md
-    - examples/quiz_and_questions/index.md
+  - Reference:
+    - reference/slides/index.md
+    - reference/quiz/index.md
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
