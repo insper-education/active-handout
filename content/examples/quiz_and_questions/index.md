@@ -21,11 +21,13 @@
 
 We can also create validation checkpoints that only show the next content when students have answered all quizzes. Notice it does not work if some questions are still not answered.
 
--------
+!!! progress
+    Button text goes here
 
 Students then continue following the handout. We can use as many checkpoints as we need.
 
-------
+!!! progress
+    Continue
 
 !!! question choice
     Was this helpful?

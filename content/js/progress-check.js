@@ -17,19 +17,20 @@
 
     let document_addr = document.location.pathname;
 
-    let all_hr = document.querySelectorAll("article > hr");
-    if (all_hr.length > 0) {
-        let next = all_hr[0].nextElementSibling;
+    let all_checkpoints = document.querySelectorAll(".admonition.progress");
+    if (all_checkpoints.length > 0) {
+        let next = all_checkpoints[0].nextElementSibling;
         while (next != null) {
             next.style.display = "none";
             next = next.nextElementSibling;
         }
     }
 
-    all_hr.forEach((item, k) => {
+    all_checkpoints.forEach((item, k) => {
+        let text = item.querySelector('p:not(.admonition-title)').innerText;
         let but = document.createElement("input");
         but.type = "button";
-        but.value = "Cheguei aqui";
+        but.value = text;
         but.classList.add("checkpoint");
         but.style.display = item.style.display;
         let storage_key = document_addr + "/checkpoint-" + k;
@@ -60,8 +61,8 @@
         });
     });
 
-    let all_checkpoints = document.querySelectorAll(".checkpoint");
-    all_checkpoints.forEach((item, k) => {
+    let all_checkpoint_buttons = document.querySelectorAll(".checkpoint");
+    all_checkpoint_buttons.forEach((item, k) => {
         let storage_key = document_addr + "/checkpoint-" + k;
         if (localStorage[storage_key] == "true") {
             item.click();
