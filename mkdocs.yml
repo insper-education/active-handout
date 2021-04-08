@@ -29,3 +29,6 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.details
+
+plugins: 
+  - git-revision-date-localized
