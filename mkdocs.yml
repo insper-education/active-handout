@@ -17,6 +17,7 @@ nav:
   - Reference:
     - reference/slides/index.md
     - reference/quiz/index.md
+    - reference/short-questions/index.md
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
