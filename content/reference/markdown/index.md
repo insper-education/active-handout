@@ -40,7 +40,7 @@ Saci is a character in Brazilian folklore. He is a one-legged black or bi-racial
 
 The legend says that a person can trap a Saci inside a bottle when he is in the form of a dust devil. 
 
-> source: Wikipidia
+> source: Wikipedia 
 
 ## Lists
 
