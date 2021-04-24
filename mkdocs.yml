@@ -19,6 +19,7 @@ nav:
     - reference/slides/index.md
     - reference/quiz/index.md
     - reference/short-questions/index.md
+    - reference/progress-check/index.md
     - reference/markdown/index.md
 
 extra_javascript:

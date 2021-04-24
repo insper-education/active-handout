@@ -8,7 +8,7 @@ extensions:
 
 config:
   short-questions:
-      text: "Validat2e"
+      text: "Check"
   counter:
     - question
     - tip

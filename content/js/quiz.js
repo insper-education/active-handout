@@ -35,9 +35,11 @@
         form_quiz.appendChild(form_quiz_ul);
 
         let answer = item.querySelector(".admonition.details");
-        answer.remove();
-        answer.style.display = "none";
-        form_quiz.appendChild(answer);
+        if (answer) {
+            answer.remove();
+            answer.style.display = "none";
+            form_quiz.appendChild(answer);
+        }       
 
         toggle_disabled(form_quiz_choices, false, false);
 
@@ -66,7 +68,10 @@
                     localStorage[storage_key] = i;
 
                     toggle_disabled(form_quiz_choices, true);
-                    answer.style.display = "";
+
+                    if (answer) {
+                        answer.style.display = "";
+                    }
 
                     item.dataset.answered = true;
 
@@ -85,7 +90,11 @@
                 checkbox.checked = true;
                 checkbox.classList.add("wrong-answer");
             }
-            answer.style.display = "";
+
+            if (answer) {
+                answer.style.display = "";
+            }
+            
             item.dataset.answered = true;
         }
 
