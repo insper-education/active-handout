@@ -33,6 +33,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.tabbed
   - pymdownx.superfences
+  - pymdownx.magiclink
   - pymdownx.critic:
       mode: view
   - pymdownx.betterem:
@@ -41,6 +42,8 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.smartsymbols
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - attr_list
 
 plugins: 

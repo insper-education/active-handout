@@ -29,14 +29,18 @@ A new paragraph is created by a one or more empty lines, line break (enter) wont
 *Markdown:*
 
 ```
-Saci is a character in Brazilian folklore. He is a one-legged black or bi-racial youngster, who smokes a pipe and wears a magical red cap that enables him to disappear and reappear wherever he wishes (usually in the middle of a dust devil). Considered an annoying prankster in most parts of Brazil, and a potentially dangerous and malicious creature in others, he nevertheless grants wishes to anyone who manages to trap him or steal his magic cap. However, his cap is often depicted as having a bad smell. Most people who claimed to have stolen this cap say they can never wash the smell away.
+Saci is
+a character in Brazilian folklore.
+He is a one-legged black or bi-racial youngster, who smokes a pipe and wears a magical red cap that enables him to disappear and reappear wherever he wishes (usually in the middle of a dust devil). Considered an annoying prankster in most parts of Brazil, and a potentially dangerous and malicious creature in others, he nevertheless grants wishes to anyone who manages to trap him or steal his magic cap. However, his cap is often depicted as having a bad smell. Most people who claimed to have stolen this cap say they can never wash the smell away.
 
 The legend says that a person can trap a Saci inside a bottle when he is in the form of a dust devil. 
 ```
 
 *Result:*
 
-Saci is a character in Brazilian folklore. He is a one-legged black or bi-racial youngster, who smokes a pipe and wears a magical red cap that enables him to disappear and reappear wherever he wishes (usually in the middle of a dust devil). Considered an annoying prankster in most parts of Brazil, and a potentially dangerous and malicious creature in others, he nevertheless grants wishes to anyone who manages to trap him or steal his magic cap. However, his cap is often depicted as having a bad smell. Most people who claimed to have stolen this cap say they can never wash the smell away.
+Saci is 
+a character in Brazilian folklore. 
+He is a one-legged black or bi-racial youngster, who smokes a pipe and wears a magical red cap that enables him to disappear and reappear wherever he wishes (usually in the middle of a dust devil). Considered an annoying prankster in most parts of Brazil, and a potentially dangerous and malicious creature in others, he nevertheless grants wishes to anyone who manages to trap him or steal his magic cap. However, his cap is often depicted as having a bad smell. Most people who claimed to have stolen this cap say they can never wash the smell away.
 
 The legend says that a person can trap a Saci inside a bottle when he is in the form of a dust devil. 
 
@@ -104,6 +108,21 @@ Lists can be made as follows:
     - [ ] No checked
     - [x] Checked item
     
+## Emojis
+
+You can use emojis from the list:
+
+- https://github.com/caiyongji/emoji-list
+
+*Markdown:*
+
+```
+:two_hearts: :star:
+```
+
+*Result:*
+
+:two_hearts: :star:
 
 ## Emphasis
 
@@ -162,6 +181,26 @@ Possibles text emphasis and modifications:
     
     > source: https://squidfunk.github.io/mkdocs-material/reference/formatting/
 
+## Images 
+
+Images you insert as in plain markdown: ![](image_path), but you have the advantage of being able to change the dimensions with `{width=...}`.
+
+*Markdown:*
+
+```
+![](icon-elementos.png)
+```
+
+```
+![](icon-elementos.png){width=200}
+```
+
+*Result:*
+
+![](icon-elementos.png)
+
+![](icon-elementos.png){width=200}
+
 ## Box
 
 You can use box as fallowing:
@@ -175,16 +214,22 @@ You can use box as fallowing:
     - note, example, warning, info, tip, danger
     
     You only need to change `!!! TYPE`
-    
+```
+
+```
 !!! example "Modify the title"
     It is possible to modify the box title.
     
     !!! warning
         A box inside a box is also possible.
+```
 
+```
 !!! danger ""
     This is a box without title.
-    
+```
+
+```
 ??? info 
     You can create a box thas is expandable.
     
@@ -225,24 +270,111 @@ You can use box as fallowing:
     
     oi!
     ```
+ 
+## Code and Syntax Highlighting
+
+You can include code, citation or no formatted text in two ways: inline or block:
+
+*Markdown:*
+
+Inline `code` has `back-ticks around` it. Block code are fenced by lines with three back-ticks  <code>```</code>, you can highlight it by providing the language.
+
+No highlight:
+
+    ```
+
     
-<!--
-## Snipets
+    Emp      ty spaces
+    paragraph     
+    ```
 
-Usar emojis da lista:
+Code highlight:
 
-:two_hearts: - https://github.com/caiyongji/emoji-list
+    ```c
+    #include <stdio.h>
 
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+    
+Block diagram:
 
-```c
-// da para colocar códigos
- void main (void) {}
+    ```
+    x---------x           x---------x
+    |         |           |         |
+    | uc      |           | LCD     |
+    |   ------|    spi    |-------  |
+    |   | spi | <---/---> | ili  |  |
+    x---------x           x---------x
+    ```
+
+*Result:*
+
+Inline `code` has `back-ticks around` it. Block code are fenced by lines with three back-ticks  <code>```</code>, you can highlight it by providing the language.
+
+No highlight
+
 ```
 
-É legal usar abas para coisas desse tipo:
-    
-=== "C"
 
+Emp      ty spaces
+paragraph     
+```
+
+Code highlight:
+
+```c
+#include <stdio.h>
+ int main(void) {
+  printf("Hello world!\n");
+  return 0;
+}
+```
+
+Block diagram:
+
+```
+  x---------x           x---------x
+  |         |           |         |
+  | uc      |           | LCD     |
+  |   ------|    spi    |-------  |
+  |   | spi | <---/---> | ili  |  |
+  x---------x           x---------x
+```
+
+### tabbed
+
+You can use tabbed to provide another version of the same content.
+
+*Markdown:*
+
+```
+=== "C"
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+    printf("Hello world!\n");
+    return 0;
+    }
+    ```
+
+=== "C++"
+    ``` c++
+    #include <iostream>
+
+    int main(void) {
+    std::cout << "Hello world!" << std::endl;
+    return 0;
+    }
+    ```
+```
+
+*Result:*
+
+=== "C"
     ``` c
     #include <stdio.h>
 
@@ -253,7 +385,6 @@ Usar emojis da lista:
     ```
 
 === "C++"
-
     ``` c++
     #include <iostream>
 
@@ -263,19 +394,23 @@ Usar emojis da lista:
     }
     ```
 
-Inserir vídeo:
+## Multimidia
 
--  Abra o youtube :arrow_right: clique com botão direito no vídeo :arrow_right: copia código de incorporação:
+To insert a youtube vídeo go to the youtube page, right click on video and copy embedded code:
+
+*Markdown:*
+
+```
+<iframe width="630" height="450" src="https://www.youtube.com/embed/UIGsSLCoIhM"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+
+*Result:*
 
 <iframe width="630" height="450" src="https://www.youtube.com/embed/UIGsSLCoIhM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 !!! tip
-    Eu ajusto o tamanho do vídeo `width`/`height` para não ficar gigante na página
-    
-Imagens você insere como em plain markdown, mas tem a vantagem de poder mudar as dimensões com o marcador `{width=...}`
-    
-![](icon-elementos.png)
+    You can adjust the size of the video by modifying fields `width` and `heigth`
+ 
 
-![](icon-elementos.png){width=200}
-
--->
