@@ -57,6 +57,8 @@
                 next = next.nextElementSibling;
             }
 
+            var hr = document.createElement("HR");
+            but.parentElement.replaceChild(hr, but);
             but.remove();
         });
     });
