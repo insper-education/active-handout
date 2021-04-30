@@ -1,11 +1,11 @@
 extensions:
   - translate-admonitions
+  - report
   - quiz
   - short-questions
   - progress-check
   - slides
   - counter
-  - report
 
 config:
   short-questions:

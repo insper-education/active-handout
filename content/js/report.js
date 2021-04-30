@@ -54,4 +54,20 @@
             ts: Date()
         });
     }
+
+    function quizReport(page_id, quiz_id, user_choice, correct_choice) {
+        var course_id = window.ihandout_config["report"]["id"];
+        var sem_id = window.ihandout_config["report"]["semester"];
+        var path = course_id + "/" + sem_id + quiz_id
+
+        var postListRef = firebase.database().ref(path);
+        var newPostRef = postListRef.push();
+        newPostRef.set({
+            user: getUserId(),
+            ts: Date(),
+            user_choice: user_choice,
+            correct_choice: correct_choice
+        });
+    }
+
 }
