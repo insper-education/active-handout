@@ -46,7 +46,12 @@
                 prev = prev.previousElementSibling;
             }
 
-            localStorage[storage_key] = true;
+            if (localStorage.getItem(storage_key) == null) {
+                if(window.ihandout_config["report"]["progress"] == true) {
+                    progressReport("dadaaw", storage_key, document_addr);
+                }
+                //localStorage[storage_key] = true;
+            }
 
             let next = but.nextElementSibling;
             while (next != null) {
