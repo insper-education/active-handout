@@ -16,7 +16,8 @@ config:
   report:
       id: "interactive-handout"
       semester: "21a"
-      progress: true
+      enable: true
+      identified: true
 
       firebase:
         apiKey: "AIzaSyAXVhe_fAYpOE-yQvxelPnq4HMBQGunfxY"

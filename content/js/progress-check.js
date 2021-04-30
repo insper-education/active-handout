@@ -47,10 +47,10 @@
             }
 
             if (localStorage.getItem(storage_key) == null) {
-                if(window.ihandout_config["report"]["progress"] == true) {
-                    progressReport("dadaaw", storage_key, document_addr);
+                if(window.ihandout_config["report"]["enable"] == true) {
+                    checkpointReport(storage_key, document_addr);
                 }
-                //localStorage[storage_key] = true;
+                localStorage[storage_key] = true;
             }
 
             let next = but.nextElementSibling;
