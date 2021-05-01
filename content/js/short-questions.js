@@ -28,7 +28,6 @@
     }
     `;
 
-
     let document_addr = document.location.pathname;
 
     let button_text = "Validate";
@@ -76,6 +75,7 @@
                     text.disabled = true;
                     validate_button.remove();
                     item.dataset.answered = true;
+                    quizReport(document_addr, storage_key, student_answer, '');
                 }
                 
             });

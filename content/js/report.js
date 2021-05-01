@@ -13,6 +13,10 @@
         firebase.initializeApp(firebaseConfig);
     }
 
+    function clearPath(path) {
+        return(path.replace(/([^:]\/)\/+/g, "$1"));
+    }
+
     function makeid(length) {
         var result           = [];
         var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -45,7 +49,7 @@
     function checkpointReport(progress_id, page_id) {
         var course_id = window.ihandout_config["report"]["id"];
         var sem_id = window.ihandout_config["report"]["semester"];
-        var path = course_id + "/" + sem_id + progress_id
+        var path = course_id + "/" + sem_id + clearPath(progress_id);
 
         var postListRef = firebase.database().ref(path);
         var newPostRef = postListRef.push();
@@ -58,7 +62,7 @@
     function quizReport(page_id, quiz_id, user_choice, correct_choice) {
         var course_id = window.ihandout_config["report"]["id"];
         var sem_id = window.ihandout_config["report"]["semester"];
-        var path = course_id + "/" + sem_id + quiz_id
+        var path = course_id + "/" + sem_id + clearPath(quiz_id);
 
         var postListRef = firebase.database().ref(path);
         var newPostRef = postListRef.push();
