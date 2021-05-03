@@ -53,10 +53,17 @@
 
         var postListRef = firebase.database().ref(path);
         var newPostRef = postListRef.push();
+
+        var user_id = getUserId();
+        if (user_id == "" || user_id == null) {
+            return false;
+        }
+
         newPostRef.set({
-            user: getUserId(),
+            user: user_id,
             ts: Date()
         });
+        return true;
     }
 
     function quizReport(page_id, quiz_id, user_choice, correct_choice) {
@@ -66,12 +73,19 @@
 
         var postListRef = firebase.database().ref(path);
         var newPostRef = postListRef.push();
+
+        var user_id = getUserId();
+        if (user_id == "" && user_id == null) {
+            return false;
+        }
+
         newPostRef.set({
             user: getUserId(),
             ts: Date(),
             user_choice: user_choice,
             correct_choice: correct_choice
         });
+        return true;
     }
 
 }

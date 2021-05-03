@@ -46,25 +46,30 @@
                 prev = prev.previousElementSibling;
             }
 
+            var enable = true;
             if (localStorage.getItem(storage_key) == null) {
                 if(window.ihandout_config["report"]["enable"] == true) {
-                    checkpointReport(storage_key, document_addr);
+                    enable = checkpointReport(storage_key, document_addr);
                 }
-                localStorage[storage_key] = true;
             }
 
             let next = but.nextElementSibling;
             while (next != null) {
-                next.style.display = "";
+                if(enable) {
+                    next.style.display = "";
+                }
                 if (next.classList.contains("checkpoint")) {
                     break;
                 }
                 next = next.nextElementSibling;
             }
 
-            var hr = document.createElement("HR");
-            but.parentElement.replaceChild(hr, but);
-            but.remove();
+            if (enable){
+                localStorage[storage_key] = true;
+                var hr = document.createElement("HR");
+                but.parentElement.replaceChild(hr, but);
+                but.remove();
+            }
         });
     });
 
