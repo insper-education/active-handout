@@ -1,4 +1,4 @@
-# interactive handout
+# Active handout
 
 An essential part of Active Learning is mobilizing students to participate in their learning processes. 
 Although many different strategies exist, such as inverted classrooms, collaborative learning groups, 
@@ -28,3 +28,11 @@ We provide this extras tools:
 - Embedded quiz 
 - Student progress check
 - Automatic embedded slides on page
+
+## Examples
+
+Real use case:
+
+- https://insper.github.io/ComputacaoEmbarcada/Lab-9-ECG/
+- https://insper.github.io/SistemasHardwareSoftware/aulas/14-exec/
+- https://insper.github.io/Z01.1/assembler-Lab-1/
