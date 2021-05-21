@@ -48,9 +48,7 @@
 
             var enable = true;
             if (localStorage.getItem(storage_key) == null) {
-                if(window.ihandout_config["report"]["enable"] == true) {
-                    enable = checkpointReport(storage_key, document_addr);
-                }
+                enable = checkpointReport(storage_key, document_addr);
             }
 
             let next = but.nextElementSibling;

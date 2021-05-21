@@ -1,5 +1,7 @@
 {
-    if(window.ihandout_config["report"]["enable"] == true) {
+    reportEnabled = window.ihandout_config["report"]["enable"];
+
+    if (window.ihandout_config["report"]["enable"] == true) {
         var firebaseConfig = {
             apiKey: window.ihandout_config["report"]["firebase"]["apiKey"],
             authDomain: window.ihandout_config["report"]["firebase"]["authDomain"],
@@ -27,9 +29,11 @@
         return result.join('');
     }
 
-    const pop = "Ao informar o seu nome você concorda que com o uso de cookies essenciais e tecnologias semelhantes. \r\n\nCada vez que apartar o botão de progresso iremos armazenar o seu nome, o ID do botão e a hora, estes dados serão utilziados para melhor entender o comportamento dos alunos durante os estudos e aulas. \r\n\nNome completo:"
-
     function getUserId() {
+        var pop = window.ihandout_config["report"]["identified-prompt-mesage"];
+        if (pop == null){
+            pop = "- Student: Please inform your instructor of this message. \n\r - Instructor: You need to fill in the field: identified-prompt-mesage in the settings file."
+        }
         var identified = window.ihandout_config["report"]["identified"];
         user_id = localStorage.getItem('user_id')
         if ( user_id == null) {
@@ -47,6 +51,9 @@
     }
 
     function checkpointReport(progress_id, page_id) {
+        if(reportEnabled != true) {
+            return true;
+        }
         var course_id = window.ihandout_config["report"]["id"];
         var sem_id = window.ihandout_config["report"]["semester"];
         var path = course_id + "/" + sem_id + clearPath(progress_id);
@@ -67,6 +74,9 @@
     }
 
     function quizReport(page_id, quiz_id, user_choice, correct_choice) {
+        if(reportEnabled != true) {
+            return true;
+        }
         var course_id = window.ihandout_config["report"]["id"];
         var sem_id = window.ihandout_config["report"]["semester"];
         var path = course_id + "/" + sem_id + clearPath(quiz_id);

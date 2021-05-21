@@ -65,9 +65,7 @@
                     }
 
                     if (localStorage.getItem(storage_key) == null) {
-                        if(window.ihandout_config["report"]["enable"] == true) {
-                            quizReport(document_addr, storage_key, choice.textContent.trim() , correct_choice.textContent.trim());
-                        }
+                        quizReport(document_addr, storage_key, choice.textContent.trim() , correct_choice.textContent.trim());
                         localStorage[storage_key] = i;
                     }
 
