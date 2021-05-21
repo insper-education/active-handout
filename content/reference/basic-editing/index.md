@@ -37,7 +37,18 @@ Text is added by... just writing text. Paragraphs are separated by an empty line
 
 ## Bold, italics and other text emphasis
 
-Possibles text emphasis and modifications:
+Basic formatting can be done using simple text annotations. See the example below for some common text formatting.
+
+=== "Result"
+    It is very easy to type **bold**, *italic* and `monospaced` text. We can also ==highlight==, ~~strikethrough~~ and ^^underline^^ text. All these **can *be applied* ==together and may span== ^^many words^^.**. We can also put type ^superscript^ and ~subscript~ text. 
+    
+=== "Markdown"
+    ```
+    It is very easy to type **bold**, *italic* and `monospaced` text. 
+    We can also ==highlight==, ~~strikethrough~~ and ^^underline^^ text. 
+    All these **can *be applied* ==together and may span== ^^many words^^.**. 
+    We can also put type ^superscript^ and ~subscript~ text. 
+    ```
 
 === "General"
 
@@ -72,25 +83,25 @@ Possibles text emphasis and modifications:
     - H~2~0
     - A^T^A
     ```
-    
-    *Result:*
-    
-    Text can be {​--deleted--} and replacement text {​++added++}. This can also be
-    combined into {​~~one~>a single~~} operation. {​==Highlighting==} is also
-    possible {​>>and comments can be added inline<<}.
 
-    More options:
+*Result:*
 
-    - ==This was marked==
-    - ^^This was inserted^^
-    - ~~This was deleted~~
-    
-    Smart Symbols:
-    
-    - H~2~0
-    - A^T^A
-    
-    > source: https://squidfunk.github.io/mkdocs-material/reference/formatting/
+Text can be {​--deleted--} and replacement text {​++added++}. This can also be
+combined into {​~~one~>a single~~} operation. {​==Highlighting==} is also
+possible {​>>and comments can be added inline<<}.
+
+More options:
+
+- ==This was marked==
+- ^^This was inserted^^
+- ~~This was deleted~~
+
+Smart Symbols:
+
+- H~2~0
+- A^T^A
+
+> source: https://squidfunk.github.io/mkdocs-material/reference/formatting/
 
 
 ## Lists

@@ -186,17 +186,16 @@ Tabs can be used to provide another version of the same content.
 
 To insert a youtube vídeo go to the youtube page, right click on video and copy embedded code:
 
-*Markdown:*
 
-```
-<iframe width="630" height="450" src="https://www.youtube.com/embed/UIGsSLCoIhM"
-frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture" allowfullscreen></iframe>
-```
-
-*Result:*
-
-<iframe width="630" height="450" src="https://www.youtube.com/embed/UIGsSLCoIhM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+=== "Result"
+    <iframe width="630" height="450" src="https://www.youtube.com/embed/UIGsSLCoIhM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+=== "Markdown"
+    ```
+    <iframe width="630" height="450" src="https://www.youtube.com/embed/UIGsSLCoIhM"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture" allowfullscreen></iframe>
+    ```
 
 !!! tip
     You can adjust the size of the video by modifying fields `width` and `heigth`
