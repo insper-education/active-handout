@@ -5,10 +5,10 @@ extensions:
   - progress-check
   - slides
   - counter
+  - modal-images
 
 config:
   short-questions:
       text: "Check"
   counter:
     - question
-    - tip
