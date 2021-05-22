@@ -16,11 +16,12 @@ edit_uri: edit/main/content/
 nav:
   - Home: index.md
   - Reference:
+    - reference/basic-editing/index.md
+    - reference/advanced-editing/index.md
     - reference/slides/index.md
     - reference/quiz/index.md
     - reference/short-questions/index.md
     - reference/progress-check/index.md
-    - reference/markdown/index.md
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
