@@ -52,11 +52,11 @@
 
         let text = document.createElement("input");
         text.type = "text";
-    
+
+        answer_line.appendChild(text);
         if (previous_answer) {
             text.value = previous_answer;
             text.disabled = true;
-            answer_line.appendChild(text);
             item.appendChild(answer);
             item.dataset.answered = true;
         } else {
@@ -64,22 +64,21 @@
             validate_button.type = "button";
             validate_button.value = button_text;
 
-            answer_line.appendChild(text);
             answer_line.appendChild(validate_button);
     
             validate_button.addEventListener("click", (evt) => {
                 let student_answer = text.value.trim();
                 if (student_answer != "") {
-                    item.appendChild(answer);
-                    localStorage[storage_key] = student_answer;
-                    text.disabled = true;
-                    validate_button.remove();
-                    item.dataset.answered = true;
-                    quizReport(document_addr, storage_key, student_answer, '');
+                    statusReport = quizReport(document_addr, storage_key, student_answer, '');
+                    if (statusReport == true){
+                        localStorage[storage_key] = student_answer;
+                        item.appendChild(answer);
+                        text.disabled = true;
+                        validate_button.remove();
+                        item.dataset.answered = true;
+                    }
                 }
-                
             });
         }   
-    
     });
 }
