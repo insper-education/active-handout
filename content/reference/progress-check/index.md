@@ -20,3 +20,11 @@ Try clicking the button bellow. Reveals persist page refreshes, so students that
 
 * Indicating that students have to check their answers with instructors or peers before proceeding
 * Indicating that students won't be able to proceed unless a certain set of tasks and readings is completed
+
+!!! progress
+    Show the rest
+    
+
+!!! progress
+    Show the rest
+

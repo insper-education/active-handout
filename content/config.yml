@@ -1,5 +1,6 @@
 extensions:
   - translate-admonitions
+  - report
   - quiz
   - short-questions
   - progress-check
@@ -13,3 +14,23 @@ config:
   counter:
     - question
     - tip
+  report:
+      id: "interactive-handout"
+      semester: "21a"
+      enable: true
+      identified: true
+      identified-prompt-mesage: |
+        Ao informar o seu nome você concorda que com o uso de cookies essenciais e tecnologias semelhantes. Cada vez que interagir com alguma coisa do handout iremos armazenar em um db remoto o seu nome, o instante a a informação referente.
+
+        Estes dados serão utilziados para melhor entender o comportamento dos alunos durante os estudos e aulas.
+
+      Informe sue nome completo:
+
+      firebase:
+        apiKey: "AIzaSyAXVhe_fAYpOE-yQvxelPnq4HMBQGunfxY"
+        authDomain: "progress-a14fe.firebaseapp.com"
+        databaseURL: "https://progress-a14fe-default-rtdb.firebaseio.com"
+        projectId: "progress-a14fe"
+        storageBucket: "progress-a14fe.appspot.com"
+        messagingSenderId: "941328714948"
+        appId: "1:941328714948:web:cd4baa3958d64ec3df4d91"
