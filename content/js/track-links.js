@@ -1,13 +1,11 @@
 {
-    let admonitions_for_counting = ["question", "example"];
-
-    for (const admonition_type of admonitions_for_counting) {
-        let elements = document.querySelectorAll(".admonition." + admonition_type);
-        let count = 1;
-        for (const element of elements) {
-            let title = element.querySelector(".admonition-title");
-            title.innerHTML += " " + count;
-            count++;
+    let document_addr = document.location.pathname;
+    var elements = document.getElementsByClassName("md-content")[0].getElementsByTagName('a');
+    for(var i = 0, len = elements.length; i < len; i++) {
+        if (elements[i].className == "") {
+            elements[i].onclick = function (obj) {
+                linkReport(obj.target.href, document_addr);
+            }
         }
     }
 }
