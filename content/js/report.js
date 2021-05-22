@@ -1,7 +1,7 @@
 {
     reportEnabled = window.ihandout_config["report"]["enable"];
 
-    if (window.ihandout_config["report"]["enable"] == true) {
+    if (reportEnabled) {
         var firebaseConfig = {
             apiKey: window.ihandout_config["report"]["firebase"]["apiKey"],
             authDomain: window.ihandout_config["report"]["firebase"]["authDomain"],
@@ -30,7 +30,7 @@
     }
 
     function getUserId() {
-        var pop = window.ihandout_config["report"]["identified-prompt-mesage"];
+        var pop = window.ihandout_config["report"]["identified-prompt-message"];
         if (pop == null){
             pop = "- Student: Please inform your instructor of this message. \n\r - Instructor: You need to fill in the field: identified-prompt-mesage in the settings file."
         }
@@ -50,12 +50,13 @@
         return(user_id)
     }
 
+    var course_id = window.ihandout_config["report"]["id"];
+    var sem_id = window.ihandout_config["report"]["semester"];
+
     function checkpointReport(progress_id, page_id) {
         if(reportEnabled != true) {
             return true;
         }
-        var course_id = window.ihandout_config["report"]["id"];
-        var sem_id = window.ihandout_config["report"]["semester"];
         var path = course_id + "/" + sem_id + clearPath(progress_id);
 
         var postListRef = firebase.database().ref(path);
@@ -77,15 +78,13 @@
         if(reportEnabled != true) {
             return true;
         }
-        var course_id = window.ihandout_config["report"]["id"];
-        var sem_id = window.ihandout_config["report"]["semester"];
         var path = course_id + "/" + sem_id + clearPath(quiz_id);
 
         var postListRef = firebase.database().ref(path);
         var newPostRef = postListRef.push();
 
         var user_id = getUserId();
-        if (user_id == "" && user_id == null) {
+        if (user_id == "" || user_id == null) {
             return false;
         }
 
@@ -97,5 +96,4 @@
         });
         return true;
     }
-
 }

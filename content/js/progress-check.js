@@ -46,14 +46,14 @@
                 prev = prev.previousElementSibling;
             }
 
-            var enable = true;
+            var reportStatus = true;
             if (localStorage.getItem(storage_key) == null) {
-                enable = checkpointReport(storage_key, document_addr);
+                reportStatus = checkpointReport(storage_key, document_addr);
             }
 
             let next = but.nextElementSibling;
             while (next != null) {
-                if(enable) {
+                if(reportStatus) {
                     next.style.display = "";
                 }
                 if (next.classList.contains("checkpoint")) {
@@ -62,7 +62,7 @@
                 next = next.nextElementSibling;
             }
 
-            if (enable){
+            if (reportStatus){
                 localStorage[storage_key] = true;
                 var hr = document.createElement("HR");
                 but.parentElement.replaceChild(hr, but);
