@@ -6,6 +6,7 @@ extensions:
   - progress-check
   - slides
   - counter
+  - track-links
 
 config:
   short-questions:

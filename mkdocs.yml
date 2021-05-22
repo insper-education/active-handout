@@ -21,6 +21,7 @@ nav:
     - reference/short-questions/index.md
     - reference/progress-check/index.md
     - reference/markdown/index.md
+    - reference/track-links/index.md
 
 extra_javascript:
    - https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js

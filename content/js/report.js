@@ -53,6 +53,28 @@
     var course_id = window.ihandout_config["report"]["id"];
     var sem_id = window.ihandout_config["report"]["semester"];
 
+    function linkReport(url, page_id) {
+        if(reportEnabled != true) {
+            return true;
+        }
+        var path = course_id + "/" + sem_id + page_id + "/track-links/";
+
+        var postListRef = firebase.database().ref(path);
+        var newPostRef = postListRef.push();
+
+        var user_id = getUserId();
+        if (user_id == "" || user_id == null) {
+            return false;
+        }
+
+        newPostRef.set({
+            url: url,
+            user: user_id,
+            ts: Date()
+        });
+        return true;
+    }
+
     function checkpointReport(progress_id, page_id) {
         if(reportEnabled != true) {
             return true;
