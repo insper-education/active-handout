@@ -50,24 +50,9 @@ Basic formatting can be done using simple text annotations. See the example belo
     We can also put type ^superscript^ and ~subscript~ text. 
     ```
 
-=== "General"
+Citric plugin expands the annotations:
 
-    *Markdown:*
-
-    ```
-    - *Italic*
-    - **Bold**
-    ```
-
-    *Result:*
-
-    - *Italic*
-    - **Bold**
-
-=== "Expanded"
-    
-    *Markdown:*
-    ```
+=== "Result"
     Text can be {​--deleted--} and replacement text {​++added++}. This can also be
     combined into {​~~one~>a single~~} operation. {​==Highlighting==} is also
     possible {​>>and comments can be added inline<<}.
@@ -82,33 +67,39 @@ Basic formatting can be done using simple text annotations. See the example belo
     
     - H~2~0
     - A^T^A
+
+=== "Markdown"
     ```
+    Text can be {​--deleted--} and replacement text {​++added++}. This can also be
+    combined into {​~~one~>a single~~} operation. {​==Highlighting==} is also
+    possible {​>>and comments can be added inline<<}.
 
-*Result:*
+    More options:
 
-Text can be {​--deleted--} and replacement text {​++added++}. This can also be
-combined into {​~~one~>a single~~} operation. {​==Highlighting==} is also
-possible {​>>and comments can be added inline<<}.
+    - ==This was marked==
+    - ^^This was inserted^^
+    - ~~This was deleted~~
 
-More options:
+    Smart Symbols:
 
-- ==This was marked==
-- ^^This was inserted^^
-- ~~This was deleted~~
+    - H~2~0
+    - A^T^A
 
-Smart Symbols:
-
-- H~2~0
-- A^T^A
-
-> source: https://squidfunk.github.io/mkdocs-material/reference/formatting/
-
-
+    > source: https://squidfunk.github.io/mkdocs-material/reference/formatting/
+    ```
+    
 ## Lists
 
 Lists can be made as follows:
 
 === "Unordered list"
+    *Result:*
+    
+    - Primeiro item
+    - Segundo item
+    - Terceiro item
+        - Sub item
+        - Sub item
 
     *Markdown:*
     
@@ -120,15 +111,14 @@ Lists can be made as follows:
         - Sub item
     ```
     
+=== "Ordered list"
     *Result:*
     
-    - Primeiro item
-    - Segundo item
-    - Terceiro item
-        - Sub item
-        - Sub item
-    
-=== "Ordered list"
+    1. Primeiro item
+    1. Segundo item
+    1. Terceiro item
+        1. Sub item
+        1. Sub item
 
     *Markdown:*
     
@@ -139,17 +129,13 @@ Lists can be made as follows:
         1. Sub item
         1. Sub item
     ```
-    
-    *Result:*
-    
-    1. Primeiro item
-    1. Segundo item
-    1. Terceiro item
-        1. Sub item
-        1. Sub item
     
 === "Check list"
-
+    *Result:*
+    
+    - [ ] No checked
+    - [x] Checked item
+    
     *Markdown:*
     
     ```
@@ -157,29 +143,22 @@ Lists can be made as follows:
     - [x] Checked item
     ```
 
-    *Result:*
     
-    - [ ] No checked
-    - [x] Checked item
-    
-
-
 ## Images 
 
 Images you insert as in plain markdown: ![](image_path), but you have the advantage of being able to change the dimensions with `{width=...}`.
 
-*Markdown:*
+=== "Result"
+    ![](icon-elementos.png)
 
-```
-![](icon-elementos.png)
-```
+    ![](icon-elementos.png){width=200}
 
-```
-![](icon-elementos.png){width=200}
-```
+=== "Markdown"
+    ```
+    ![](icon-elementos.png)
+    ```
 
-*Result:*
+    ```
+    ![](icon-elementos.png){width=200}
+    ```
 
-![](icon-elementos.png)
-
-![](icon-elementos.png){width=200}

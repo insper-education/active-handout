@@ -67,7 +67,13 @@ See examples of static box elements below.
 
 ### Inline code
 
-Text surrounded by backticks (the character `` `) is shown in monospaced font, `like this`.  
+=== "Result"
+    Text surrounded by backticks (the character `` `) is shown in monospaced font, `like this`.  
+
+=== "Markdown"
+    ```
+    Text surrounded by backticks (the character `` `) is shown in monospaced font, `like this`.  
+    ``` 
 
 ### Code blocks
 
@@ -199,5 +205,3 @@ To insert a youtube vídeo go to the youtube page, right click on video and copy
 
 !!! tip
     You can adjust the size of the video by modifying fields `width` and `heigth`
- 
-
