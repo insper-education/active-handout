@@ -5,6 +5,7 @@ extensions:
   - progress-check
   - slides
   - counter
+  - page-rating
 
 config:
   short-questions:
