@@ -52,20 +52,27 @@
                 check_quiz.checked = false;
             }
 
-            
             if (previous_answer === null) {
                 form_quiz_choices[i].addEventListener("click", (evt) => {
-                    if (check_quiz.disabled) return false;
-                    evt.preventDefault();
+                if (check_quiz.disabled) return false;
+                evt.preventDefault();
+                let choice = form_quiz_choices[i];
+
+                if (localStorage.getItem(storage_key) == null) {
+                    statusReport = quizReport(document_addr, storage_key, choice.textContent.trim() , correct_choice.textContent.trim());
+                    if (statusReport == true) {
+                        localStorage[storage_key] = i;
+                    }
+                } else {
+                    statusReport = true
+                }
+
+                if (statusReport == true) {
                     check_quiz.checked = true;
-                    let choice = form_quiz_choices[i];
-                    
                     correct_choice.querySelector("input[type=checkbox]").checked = true;
                     if (choice != correct_choice) {
                         check_quiz.classList.add("wrong-answer");
                     }
-
-                    localStorage[storage_key] = i;
 
                     toggle_disabled(form_quiz_choices, true);
 
@@ -74,8 +81,9 @@
                     }
 
                     item.dataset.answered = true;
+                }
 
-                    return true;
+                return true;
                 });
             } else {
                 check_quiz.disabled = true;
