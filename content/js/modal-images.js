@@ -6,16 +6,6 @@
 
     let style_progress = document.head.appendChild(document.createElement("style"));
     style_progress.innerText = `
-    #myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.1s;
-    }
-
-    #myImg:hover {
-    opacity: 0.2;
-    }
-
     .modal {
     display: none;
     position: fixed;
@@ -27,39 +17,13 @@
     height: 100%;
     overflow: auto;
     background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
     }
 
     .modal-content {
     margin: auto;
     display: block;
     width: 100%;
-    }
-
-    #caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    height: 150px;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    }
-
-    .modal-content,
-    #caption {
-    //animation-name: zoom;
-    //animation-duration: 0.2s;
-    }
-
-    @keyframes zoom {
-    from {
-        transform: scale(0)
-    }
-    to {
-        transform: scale(1)
-    }
     }
 
     .close {
@@ -88,36 +52,33 @@
     }`;
 
     document.getElementsByClassName("md-content")[0].outerHTML += `
-    <div id="myModal" class="modal">
+    <div id="modalImg" class="modal">
       <span class="close">&times;</span>
       <img class="modal-content" id="img01">
-      <div id="caption"></div>
     </div>`;
 
-    var modal = document.getElementById('myModal');
+    var modal = document.getElementById('modalImg');
     var images = document.images;
     var modalImg = document.getElementById("img01");
     var captionText = document.getElementById("caption");
 
     for (var i = 0; i < images.length; i++) {
-        var img = images[i];
-        img.onclick = function(evt) {
-            console.log(evt);
+        images[i].addEventListener("click", function() {
             modal.style.display = "block";
             modalImg.src = this.src;
             captionText.innerHTML = this.alt;
-    }}
+        });
+    }
 
     var span = document.getElementsByClassName("close")[0];
 
-    span.onclick = function() {
+    span.addEventListener("click", function() {
         modal.style.display = "none";
-    }
+    });
 
-    document.onkeydown = function(evt) {
-        evt = evt || window.event;
-        if (evt.keyCode == 27) {
+    document.addEventListener("keydown", (evt) => {
+        if (evt.keyCode == 27 || window.event) {
             modal.style.display = "none";
         }
-    };
+    });
 }
