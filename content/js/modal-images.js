@@ -58,9 +58,9 @@
     </div>`;
 
     var modal = document.getElementById('modalImg');
-    var images = document.images;
     var modalImg = document.getElementById("img01");
     var captionText = document.getElementById("caption");
+    var images = document.images;
 
     for (var i = 0; i < images.length; i++) {
         images[i].addEventListener("click", function() {
@@ -70,8 +70,7 @@
         });
     }
 
-    var span = document.getElementsByClassName("close")[0];
-
+    var span = document.querySelector(".close");
     span.addEventListener("click", function() {
         modal.style.display = "none";
     });
