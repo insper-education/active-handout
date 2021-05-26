@@ -56,15 +56,16 @@
       <span class="close">&times;</span>
       <img class="modal-content" id="img01">
     </div>`;
+    var modal = document.createElement('div.modal');
 
-    var modal = document.getElementById('modalImg');
+    var modalView = document.getElementById('modalImg');
     var modalImg = document.getElementById("img01");
     var captionText = document.getElementById("caption");
     var images = document.images;
 
     for (var i = 0; i < images.length; i++) {
         images[i].addEventListener("click", function() {
-            modal.style.display = "block";
+            modalView.style.display = "block";
             modalImg.src = this.src;
             captionText.innerHTML = this.alt;
         });
@@ -72,12 +73,12 @@
 
     var span = document.querySelector(".close");
     span.addEventListener("click", function() {
-        modal.style.display = "none";
+        modalView.style.display = "none";
     });
 
     document.addEventListener("keydown", (evt) => {
         if (evt.keyCode == 27 || window.event) {
-            modal.style.display = "none";
+            modalView.style.display = "none";
         }
     });
 }
