@@ -5,6 +5,7 @@ extensions:
   - progress-check
   - slides
   - counter
+  - videos
 
 config:
   short-questions:
