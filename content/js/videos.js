@@ -16,7 +16,7 @@
 
     return {
       source,
-      videoId: matches?.length ? matches[1] : null,
+      videoId: (isFromYoutube && matches[1]) || null,
       isFromYoutube,
       ext
     };

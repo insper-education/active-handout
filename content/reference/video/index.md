@@ -14,7 +14,7 @@ The video plugin embbeds a video directly into the page.
 ### From Youtube
 
 !!! video
-    ![Youtube Video](https://www.youtube.com/watch?v=_I6I2JOJhHY)
+    ![Youtube Video](https://www.youtube.com/watch?v=Ni709gut3RE)
 
 ### Local videos
 
