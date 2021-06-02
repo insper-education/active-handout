@@ -53,21 +53,26 @@ style.innerHTML = `
     align-items: center;
   }
 
-  @-webkit-keyframes fadein {
-    from {-webkit-transform: translateY(50px); opacity: 0;}
-    to {-webkit-transform: translateY(0px); opacity: 1;}
-  }
   @keyframes fadein {
-    from {transform: translateY(50px); opacity: 0;}
-    to {transform: translateY(0px); opacity: 1;}
+    from {
+        transform: translateY(50px); 
+        opacity: 0;
+    }
+    to {
+      transform: translateY(0px); 
+      opacity: 1;
+    }
   }
-  @-webkit-keyframes fadeout {
-    from {-webkit-transform: translateY(0px); opacity: 1;}
-    to {-webkit-transform: translateY(50px); opacity: 0;}
-  }
+
   @keyframes fadeout {
-    from {transform: translateY(0px); opacity: 1;}
-    to {transform: translateY(50px); opacity: 0;}
+    from {
+        max-height: 200px; 
+        opacity: 1;
+    }
+    to {
+      max-height: 0px;
+      opacity: 0;
+    }
   }
   `;
 
