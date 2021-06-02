@@ -39,4 +39,4 @@ function checkChange() {
     });
 }
 
-window.setInterval(checkChange, 5000);
+window.setInterval(checkChange, 5 * 60 * 1000);
