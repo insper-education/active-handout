@@ -1,10 +1,10 @@
 extensions:
-  - translate-admonitions
   - quiz
   - short-questions
   - progress-check
   - slides
   - counter
+  - notify-old-page
 
 config:
   short-questions:
