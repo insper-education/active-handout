@@ -9,7 +9,7 @@
       /.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/
     );
     // the above pattern is supposed to match any possible youtube URL
-    // if there is no match, this source doesn't point to an youtube video
+    // if there is no match, this source doesn't point to a youtube video
     const isFromYoutube = !!matches;
 
     const ext = isFromYoutube ? null : source.split('.').pop();
@@ -25,25 +25,10 @@
   const videoStyles = document.createElement('style');
   document.head.appendChild(videoStyles);
   videoStyles.innerHTML = `
-    .admonition.video {
-      border-left-color: #DD111180;
-    }
-    .admonition.video > p.admonition-title {
-      border-left-color: #DD111180;
-      background-color: #DD111180;
-      color: #fcfcfc;
-    }
-    .admonition.video > p.admonition-title::before {
-      background-color: #fcfcfc;
-    }
-    .admonition.video > p:nth-child(2) {
+    .video-wrapper {
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-    }
-    .admonition.video > p > img {
-      margin: auto 1rem;
+      align-items: center;
     }
     .display-print-only {
       display: none;
@@ -66,48 +51,45 @@
 
   const documentVideoTags = document.querySelectorAll('.admonition.video');
 
-  documentVideoTags.forEach((div, index) => {
+  documentVideoTags.forEach((div) => {
     const img = div.getElementsByTagName('img')[0];
     const { source, videoId, isFromYoutube, ext } = parseVideoSource(img.src);
-    const videoTitle = `${String(index).padStart(2, '0')}: ` + img.alt;
-    const parentNode = img.parentNode;
 
-    parentNode.removeChild(img);
+    const videoWrapper = document.createElement('div');
+    videoWrapper.classList.add('video-wrapper');
 
-    const pTitle = div.querySelector('p.admonition-title');
+    div.parentNode.insertBefore(videoWrapper, div);
+    div.parentNode.removeChild(div);
 
-    pTitle.textContent = videoTitle;
-
-    const qrcode = document.createElement('img');
+    const qrcodeElement = document.createElement('img');
     const qrCodeParams = new URLSearchParams({
       cht: 'qr',
-      chs: '200x200', // qr code 200x200 [px]
+      chs: '150x150',
       chl: source
     }).toString();
 
-    qrcode.src = `https://chart.googleapis.com/chart?${qrCodeParams}`;
-    qrcode.classList.add('display-print-only');
-    qrcode.alt = `${videoTitle}`;
+    qrcodeElement.classList.add('display-print-only');
+    qrcodeElement.alt = '';
+    qrcodeElement.src = `https://chart.googleapis.com/chart?${qrCodeParams}`;
 
-    const qrcodeSubtitle = document.createElement('span');
-    qrcodeSubtitle.innerText = 'Use the following QR Code to access the video';
-    qrcodeSubtitle.classList.add('display-print-only');
+    const descriptionElement = document.createElement('p');
+    const descriptionText = img.alt;
 
-    const pVideo = div.querySelector('p:nth-child(2)');
+    descriptionElement.innerText = descriptionText;
+    descriptionElement.classList.add('display-print-only');
 
-    if (isFromYoutube) {
-      const videoIframe = `<iframe class="hide-on-print" type="text/html" 
-      width="640" height="360"
-      src="http://www.youtube.com/embed/${videoId}?autoplay=0&origin=${ORIGIN}"
-      frameborder="0"/>`;
-      pVideo.innerHTML = videoIframe;
-    } else {
-      const video = `<video width="640" controls class="hide-on-print">
+    const video = isFromYoutube
+      ? `<iframe class="hide-on-print" type="text/html" 
+          width="640" height="360"
+          src="http://www.youtube.com/embed/${videoId}?autoplay=0&origin=${ORIGIN}"
+          frameborder="0"
+        />`
+      : `<video width="640" class="hide-on-print" controls>
         <source  src="${source}" type="video/${ext}"/>
       </video>`;
-      pVideo.innerHTML = video;
-    }
-    pVideo.appendChild(qrcodeSubtitle);
-    pVideo.appendChild(qrcode);
+
+    videoWrapper.innerHTML = video;
+    videoWrapper.appendChild(qrcodeElement);
+    videoWrapper.appendChild(descriptionElement);
   });
 }
