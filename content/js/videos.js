@@ -40,7 +40,7 @@
   videoStylesOnPrint.media = 'print';
   videoStylesOnPrint.innerHTML = `
     @media print {
-      .hide-on-print { 
+      .no-print { 
         display: none;
       }
       .display-print-only {
@@ -79,12 +79,12 @@
     descriptionElement.classList.add('display-print-only');
 
     const video = isFromYoutube
-      ? `<iframe class="hide-on-print" type="text/html" 
+      ? `<iframe class="no-print" type="text/html" 
           width="640" height="360"
           src="http://www.youtube.com/embed/${videoId}?autoplay=0&origin=${ORIGIN}"
           frameborder="0"
         />`
-      : `<video width="640" class="hide-on-print" controls>
+      : `<video width="640" class="no-print" controls>
         <source  src="${source}" type="video/${ext}"/>
       </video>`;
 
