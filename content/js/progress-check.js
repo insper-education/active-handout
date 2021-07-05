@@ -1,3 +1,5 @@
+import notification from "./notification.js";
+
 {
     // HACK: depends on mkdocs-material styles
     let style_progress = document.head.appendChild(document.createElement("style"));
@@ -41,6 +43,7 @@
             while (prev != null) {
                 if (prev.dataset.answered !== undefined &&
                     prev.dataset.answered === "false") {
+                        notification.toast("Please answer all questions before continuing.");
                         return;
                     }
                 prev = prev.previousElementSibling;

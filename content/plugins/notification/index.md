@@ -48,7 +48,7 @@ The following values are accepted for `bgColor`:
 - a color in hex notation (e.g. <span style="padding: 0.2rem; color: white; background-color: #FF00FF">"#FF00FF"</span>)
 
 <script type="module">
-import notification from "/js/notification.js";
+import notification from "../../js/notification.js";
 
 notification.toast("Go crazy!", { bgColor: "#FFFF00", color: "#ff4498" });
 notification.toast('bgColor "danger"', { bgColor: "danger" });
