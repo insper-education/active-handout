@@ -4,6 +4,7 @@ extensions:
   - progress-check
   - slides
   - counter
+  - videos
   - notify-old-page
 
 config:

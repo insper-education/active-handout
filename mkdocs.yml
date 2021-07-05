@@ -22,6 +22,7 @@ nav:
     - reference/quiz/index.md
     - reference/short-questions/index.md
     - reference/progress-check/index.md
+    - reference/video/index.md
   - Plugins:
     - plugins/notification/index.md
 
