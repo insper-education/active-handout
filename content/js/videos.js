@@ -81,7 +81,7 @@
     const video = isFromYoutube
       ? `<iframe class="no-print" type="text/html" 
           width="640" height="360"
-          src="http://www.youtube.com/embed/${videoId}?autoplay=0&origin=${ORIGIN}"
+          src="https://www.youtube.com/embed/${videoId}?autoplay=0&origin=${ORIGIN}"
           frameborder="0"
         />`
       : `<video width="640" class="no-print" controls>
