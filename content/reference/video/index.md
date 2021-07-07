@@ -11,6 +11,10 @@ The video plugin embbeds a video directly into the page.
 
 ## Recommended uses
 
+- Video of a short explanation of the activity, showing the expected results
+- Bring external references to the discipline, current affairs, or curiosities
+- Recap the theory or introduce something new
+
 ### From Youtube
 
 !!! video
