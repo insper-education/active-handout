@@ -1,6 +1,7 @@
 extensions:
   - quiz
   - short-questions
+  - long-questions
   - progress-check
   - slides
   - counter
