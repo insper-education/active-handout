@@ -2,7 +2,7 @@
 
 *Interactive handout* supports the creation of single choice quizzes and one line short answers. See examples below.
 
-!!! question choice
+!!! question choice id_slug1234
     aslkjdksldaj
 
     - [ ] sdfds
@@ -29,7 +29,7 @@ Students then continue following the handout. We can use as many checkpoints as 
 !!! progress
     Continue
 
-!!! question choice
+!!! question choice 
     Was this helpful?
 
     - [x] Yes

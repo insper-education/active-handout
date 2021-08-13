@@ -1,3 +1,5 @@
+import report from "./report.js";
+
 {
     // HACK: depends on mkdocs-material
     let style_short_questions = document.head.appendChild(document.createElement("style"));
@@ -44,7 +46,7 @@
         answer.remove();
         item.dataset.answered = false;
         
-        let storage_key = document_addr + "/short-question-" + k;
+        let storage_key = document_addr + "/" + item.id;
         let previous_answer = localStorage.getItem(storage_key);
        
         let answer_line = document.createElement("div");
@@ -76,6 +78,10 @@
                     text.disabled = true;
                     validate_button.remove();
                     item.dataset.answered = true;
+
+                    report.sendAnswer(item.id, 1, {
+                        text: student_answer,
+                    }, {});
                 }
                 
             });

@@ -54,3 +54,6 @@ markdown_extensions:
 
 plugins:
   - git-revision-date-localized
+  - active-exercises:
+      report_url: http://localhost:8000/api/offerings/1/exercises/
+

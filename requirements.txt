@@ -5,3 +5,4 @@ markdown
 pymdown-extensions
 mkdocs-material-extensions
 mkdocs-git-revision-date-localized-plugin
+file:exercises_plugin
