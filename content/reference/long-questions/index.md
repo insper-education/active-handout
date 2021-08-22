@@ -24,9 +24,9 @@ Try answering the question bellow. Answers persist page refreshes, so students w
 
 * Writing a single line of code or command
 * Identifying/finding something in an diagram or code snippet. 
-    
-    !!! tip
-        Examples of these are "Where does X occur?" or "In what section Y is located?". In this case we do not want to direct the students' gaze into specific parts of the code/image/etc. Instead, students should look at the whole and identify **where** they are supposed to look for what's asked.
+
+!!! tip
+    Examples of these are "Where does X occur?" or "In what section Y is located?". In this case we do not want to direct the students' gaze into specific parts of the code/image/etc. Instead, students should look at the whole and identify **where** they are supposed to look for what's asked.
 
 
 ## Customization
