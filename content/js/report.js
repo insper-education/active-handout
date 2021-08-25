@@ -1,4 +1,4 @@
-
+import { getToken } from "./auth.js"
 
 let REPORT_URL;
 if (window.ihandout_config["report"] && window.ihandout_config["report"]["url"]) {
@@ -36,14 +36,6 @@ function sendAnswer(slug, points, summary, long_answer) {
     
 
     return false;
-}
-
-
-
-function getToken() {
-
-
-    return '68b2a9fd0c57008c7f3b45cf6175361b6d6ba22a';
 }
 
 export default { sendAnswer };

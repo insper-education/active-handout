@@ -20,7 +20,7 @@ auth:
 You can get the token by importing the function from `auth.js` and calling `getToken()`:
 
 ```javascript
-import { getToken } from "./notification.js"; // You may need to adapt the path
+import { getToken } from "./auth.js"; // You may need to adapt the path
 
 const token = getToken();
 ```
