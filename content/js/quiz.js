@@ -1,3 +1,5 @@
+import report from "./report.js";
+
 {
     function toggle_disabled(form_quiz_choices, disable=false, uncheck=false) {
         form_quiz_choices.forEach((item) => {
@@ -20,7 +22,7 @@
 
     multiple_choice_questions.forEach((item, k) => {
         item.dataset.answered = false;  
-        let storage_key = document_addr + "/choice-" + k;
+        let storage_key = document_addr + "/" + item.id;
         let previous_answer = localStorage.getItem(storage_key);
 
         let choices_ul = item.querySelector(".task-list");
@@ -61,9 +63,16 @@
                     let choice = form_quiz_choices[i];
                     
                     correct_choice.querySelector("input[type=checkbox]").checked = true;
+                    let points = 1;
                     if (choice != correct_choice) {
                         check_quiz.classList.add("wrong-answer");
+                        points = 0;
                     }
+
+                    report.sendAnswer(item.id, 1, {
+                        choice: i,
+                        num_choices: choices_original.length,
+                    }, {});
 
                     localStorage[storage_key] = i;
 

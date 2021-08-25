@@ -18,3 +18,5 @@ config:
   auth:
     url: http://localhost:8000/login
     watch-urls: ".*auth.*"
+  report: 
+    url: http://localhost:8000/api/offerings/1/exercises/
