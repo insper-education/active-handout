@@ -7,10 +7,14 @@ extensions:
   - counter
   - videos
   - notify-old-page
+  - auth
 
 config:
   short-questions:
-      text: "Check"
+    text: "Check"
   counter:
     - question
     - tip
+  auth:
+    url: http://localhost:8000/login
+    watch-urls: ".*auth.*"
