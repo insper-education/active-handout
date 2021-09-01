@@ -9,21 +9,17 @@
     .modal {
     display: none;
     position: fixed;
-    z-index: 1;
     padding-top: 100px;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.6);
     }
 
     .modal-content {
     margin: auto;
     display: block;
-    width: 100%;
+    width: 90%;
     }
 
     .close {
@@ -31,18 +27,16 @@
     top: -40px;
     right: -40px;
     color: #000;
-    background-color: #fff;
-    font-size: 80px;
-    font-weight: bold;
+    font-size: 40px;
     transition: 0.3s;
-    background-size: 200px 200px;
     }
 
     .close:hover,
     .close:focus {
-    color: #bbb;
+    color: #FFF;
     text-decoration: none;
     cursor: pointer;
+    transition: 0.5s;
     }
 
     @media only screen and (max-width: 700px) {
@@ -51,34 +45,40 @@
     }
     }`;
 
-    document.getElementsByClassName("md-content")[0].outerHTML += `
-    <div id="modalImg" class="modal">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="img01">
-    </div>`;
-    var modal = document.createElement('div.modal');
+    let mDiv = document.createElement('div');
+    mDiv.className = "modal";
+    mDiv.id = "modalImg";
 
-    var modalView = document.getElementById('modalImg');
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    var images = document.images;
+    let mSpan = document.createElement('span')
+    mSpan.className = "close";
+    mSpan.innerHTML = "&times";
 
-    for (var i = 0; i < images.length; i++) {
+    let mImg = document.createElement('img');
+    mImg.className = "modal-content";
+    mImg.id = "imgNone";
+
+    mDiv.appendChild(mSpan);
+    mDiv.appendChild(mImg);
+
+    main = document.getElementsByClassName("md-container")[0];
+    main.appendChild(mDiv);
+
+    let images = document.images;
+    for (let i = 0; i < images.length; i++) {
         images[i].addEventListener("click", function() {
-            modalView.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
+            mDiv.style.display = "block";
+            mImg.src = this.src;
         });
     }
 
-    var span = document.querySelector(".close");
+    let span = document.querySelector(".close");
     span.addEventListener("click", function() {
-        modalView.style.display = "none";
+        mDiv.style.display = "none";
     });
 
     document.addEventListener("keydown", (evt) => {
         if (evt.keyCode == 27 || window.event) {
-            modalView.style.display = "none";
+            mDiv.style.display = "none";
         }
     });
 }
