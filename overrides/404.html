@@ -1,0 +1,22 @@
+{% extends "main.html" %}
+
+<!-- Content -->
+{% block content %}
+<h1>Página não encontrada</h1>
+
+<p>A página que você tentou acessar não existe.</p>
+
+<figure>
+  <img src="{{ 'assets/images/meme.gif'|url }}" />
+</figure>
+
+<p>
+  Se você digitou esse endereço, verifique se não cometeu algum erro de
+  digitação.
+</p>
+<p>
+  Se você copiou esse endereço ou clicou em um link, por favor mande pelo
+  Blackboard um email relatando o problema. Não esqueça de dizer qual é o
+  endereço!
+</p>
+{% endblock %}

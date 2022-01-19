@@ -4,6 +4,7 @@ theme:
   feature:
     tabs: true
   name: material
+  custom_dir: overrides
 
 docs_dir: content
 site_dir: docs
@@ -19,18 +20,18 @@ nav:
       - reference/basic-editing/index.md
       - reference/advanced-editing/index.md
       - reference/slides/index.md
+      - reference/exercise/index.md
       - reference/quiz/index.md
       - reference/short-questions/index.md
-      - reference/long-questions/index.md
       - reference/progress-check/index.md
       - reference/video/index.md
-      - reference/authentication/index.md
-  - Plugins:
-      - plugins/notification/index.md
+      - reference/notify-content-update/index.md
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
-  - js/markdown-enhancer.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - plugin-bundle.js
 
 markdown_extensions:
   - markdown.extensions.admonition
@@ -54,6 +55,11 @@ markdown_extensions:
 
 plugins:
   - git-revision-date-localized
-  - active-exercises:
-      report_url: http://localhost:8000/api/offerings/1/exercises/
 
+extra:
+  ihandout_config:
+    counter:
+      - question
+      - tip
+      - exercise
+      - example
