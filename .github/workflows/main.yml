@@ -29,12 +29,6 @@ jobs:
           pip install -r requirements.txt
           pip install mkdocs-minify-plugin>=0.2
 
-      # compile active handout plugin js
-      - run: |
-          git clone https://github.com/insper-education/active-handout-plugins-js plugins-js
-          npm install --prefix plugins-js
-          npm run build --prefix plugins-js
-
       # deploy
       - run: |
           mkdocs gh-deploy --force
