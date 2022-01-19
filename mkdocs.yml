@@ -63,3 +63,6 @@ extra:
       - tip
       - exercise
       - example
+    report:
+      url: https://devlife.insper-comp.com.br/api/offerings/1/exercises/
+
