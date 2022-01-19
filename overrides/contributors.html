@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+
+{% block extrahead %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+{{ super() }}
+
+<ul class="contributor-list">
+{% for author in authors %}
+  <li class="contributor">
+    <a href="{% if author.username %}https://github.com/{{ author.username }}/{% else %}#{% endif %}">
+      <div class="contributor-content">
+        {% if author.avatar %}<img src="{{ author.avatar }}" alt="{{ author.name }}" class="contributor-avatar" />{% endif %}
+        <div class="contributor-name">
+          <span>
+            {{ author.name_by_lines }}
+          </span>
+        </div>
+      </div>
+    </a>
+  </li>
+{% endfor %}
+</ul>
+
+{% endblock %}
