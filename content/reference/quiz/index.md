@@ -17,7 +17,7 @@ You can choose to display the quiz in one or two column format as you see fit fo
 Try answering the quiz bellow. Answers persist page refreshes, so students won't loose their progress after the end of a session. 
 
 ```
-!!! question choice
+!!! exercise choice "Pergunta"
     Text of the question. 
 
     - [ ] option 1
