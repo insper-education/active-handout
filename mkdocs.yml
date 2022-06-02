@@ -1,10 +1,9 @@
 site_name: Interactive Handout
 
 theme:
-  feature:
-    tabs: true
-  name: material
-  custom_dir: overrides
+  features:
+    - navigation.tabs
+  name: active-handout
 
 docs_dir: content
 site_dir: docs
@@ -68,4 +67,3 @@ extra:
       - example
     report:
       url: https://devlife.insper-comp.com.br/api/offerings/1/exercises/
-
