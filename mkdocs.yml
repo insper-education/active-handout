@@ -24,6 +24,7 @@ nav:
       - reference/short-questions/index.md
       - reference/progress-check/index.md
       - reference/video/index.md
+      - reference/terminal/index.md
       - reference/notify-content-update/index.md
 
 extra_css:
