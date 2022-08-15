@@ -1,47 +1,29 @@
-site_name: Interactive Handout
+site_name: Active Handout
 
 theme:
   features:
     - navigation.tabs
-  name: active-handout
+  name: active-handout-theme
 
 docs_dir: content
 site_dir: docs
 
-site_url: https://insper-education.github.io/interactive-handout/
-repo_name: "Interactive Handout"
-repo_url: https://github.com/insper-education/interactive-handout
+site_url: https://insper-education.github.io/active-handout/
+repo_name: "Active Handout"
+repo_url: https://github.com/insper-education/active-handout
 edit_uri: edit/main/content/
 
-nav:
-  - Home: index.md
-  - Reference:
-      - reference/basic-editing/index.md
-      - reference/advanced-editing/index.md
-      - reference/slides/index.md
-      - reference/exercise/index.md
-      - reference/quiz/index.md
-      - reference/short-questions/index.md
-      - reference/progress-check/index.md
-      - reference/video/index.md
-      - reference/terminal/index.md
-      - reference/notify-content-update/index.md
-
-extra_css:
-  - https://cdn.jsdelivr.net/gh/insper-education/active-handout-css@main/devlife.css
-
 extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://cdn.jsdelivr.net/gh/insper-education/active-handout-plugins-js@main/package/plugin-bundle.js
 
 markdown_extensions:
+  - active-handout-plugins
   - markdown.extensions.admonition
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.details
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true 
   - pymdownx.superfences
   - pymdownx.magiclink
   - pymdownx.critic:
@@ -56,15 +38,17 @@ markdown_extensions:
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - attr_list
 
-plugins:
-  - git-revision-date-localized
 
-extra:
-  ihandout_config:
-    counter:
-      - question
-      - tip
-      - exercise
-      - example
-    report:
-      url: https://devlife.insper-comp.com.br/api/offerings/1/exercises/
+nav:
+  - Home: index.md
+  - Reference:
+      - reference/basic-editing/index.md
+      - reference/advanced-editing/index.md
+      - reference/slides/index.md
+      - reference/exercise/index.md
+      - reference/quiz/index.md
+      - reference/text-questions/index.md
+      - reference/progress-check/index.md
+      - reference/video/index.md
+      # - reference/terminal/index.md
+      #- reference/notify-content-update/index.md

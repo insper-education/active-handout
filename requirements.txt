@@ -5,5 +5,4 @@ Pygments
 markdown
 pymdown-extensions
 mkdocs-git-revision-date-localized-plugin
-git+https://git@github.com/insper-education/active-handout-theme.git
-git+https://github.com/insper-education/active-handout-plugins-py.git@latest
+git+https://github.com/insper-education/active-handout-plugins-py.git@v0.3b

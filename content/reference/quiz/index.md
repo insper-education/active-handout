@@ -17,7 +17,7 @@ You can choose to display the quiz in one or two column format as you see fit fo
 Try answering the quiz bellow. Answers persist page refreshes, so students won't loose their progress after the end of a session. 
 
 ```
-!!! exercise choice "Pergunta"
+!!! question choice "Pergunta"
     Text of the question. 
 
     - [ ] option 1
@@ -29,7 +29,7 @@ Try answering the quiz bellow. Answers persist page refreshes, so students won't
         Text explaining correct answer. Only shown after option is selected.
 ```
 
-!!! exercise choice "Pergunta"
+!!! question choice "Pergunta"
     Text of the question. 
 
     - [ ] option 1
@@ -42,7 +42,7 @@ Try answering the quiz bellow. Answers persist page refreshes, so students won't
 #### two columns
 
 ```
-!!! exercise choice two-cols "Pergunta"
+!!! question choice two-cols "Pergunta"
     Text of the question. 
 
     - [ ] option 1
@@ -53,7 +53,7 @@ Try answering the quiz bellow. Answers persist page refreshes, so students won't
         Text explaining correct answer. Only shown after option is selected.
 ```
 
-!!! exercise choice two-cols "Pergunta"
+!!! question choice two-cols "Pergunta"
     Text of the question. 
 
     - [ ] option 1

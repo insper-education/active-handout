@@ -1,10 +1,18 @@
 # Slides
 
-The slides plugin adds a slide deck at the top of a handout. 
+The slides plugin adds pdf slides to handouts. 
 
 ## Syntax 
 
-No markup is needed. If a file named `slides.pdf` is present then it will be displayed. If no file is present then this plugin does nothing.
+
+```
+!!! pdf
+    ![](slides.pdf)
+```
+
+!!! pdf
+    ![](slides.pdf)
+
 
 ## Recommended uses
 

@@ -17,14 +17,14 @@ Try answering the question bellow. Answers persist page refreshes, so students w
 #### short answer 
 
 ```
-!!! exercise text short
+!!! question text short
     Text of the question. 
 
     !!! answer
         Correct answer here. Take into account that students will phrase their answers differently and try to include elements that will let them evaluate their own answers.
 ```
 
-!!! exercise text short
+!!! question text short
     Text of the short (single line) question. 
     
     !!! answer
@@ -33,14 +33,14 @@ Try answering the question bellow. Answers persist page refreshes, so students w
 #### long answer 
 
 ```
-!!! exercise text long
+!!! question text long
     Text of the long (multiple line) answer question. 
 
     !!! answer
         Correct answer here. Take into account that students will phrase their answers differently and try to include elements that will let them evaluate their own answers.
 ```
 
-!!! exercise text long
+!!! question text long
     Text of the long (multiple line) answer question. 
 
     !!! answer
