@@ -24,7 +24,11 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.tabbed:
       alternate_style: true 
-  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences  
   - pymdownx.magiclink
   - pymdownx.critic:
       mode: view
@@ -37,6 +41,11 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - attr_list
+  - pymdownx.tilde
+  - pymdownx.snippets:
+      base_path: code
+      check_paths: true
+
 
 
 nav:
@@ -50,5 +59,6 @@ nav:
       - reference/text-questions/index.md
       - reference/progress-check/index.md
       - reference/video/index.md
+      - reference/parsons.md
       # - reference/terminal/index.md
       #- reference/notify-content-update/index.md
