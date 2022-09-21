@@ -23,12 +23,12 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.details
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences  
+  - pymdownx.superfences
   - pymdownx.magiclink
   - pymdownx.critic:
       mode: view
@@ -46,10 +46,12 @@ markdown_extensions:
       base_path: code
       check_paths: true
 
-
-
 nav:
   - Home: index.md
+  - Python:
+      - Introdução:
+          - examples/index.md
+          - examples/python-intro/index.md
   - Reference:
       - reference/basic-editing/index.md
       - reference/advanced-editing/index.md
