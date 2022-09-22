@@ -50,8 +50,8 @@ nav:
   - Home: index.md
   - Python:
       - Introdução:
-          - examples/index.md
           - examples/python-intro/index.md
+          - examples/python-intro/python-code.md
   - Reference:
       - reference/basic-editing/index.md
       - reference/advanced-editing/index.md
