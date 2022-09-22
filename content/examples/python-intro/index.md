@@ -5,7 +5,7 @@ subtitle: Variáveis e Operações Matemáticas
 
 ## O Python :snake:
 
-O nome Python teve a sua origem no grupo humorístico britânico [Monty Python](https://pt.wikipedia.org/wiki/Monty_Python) (se tiver curiosidade, é possível encontrar alguns títulos no Netflix).
+O nome **Python** teve a sua origem no grupo humorístico britânico [Monty Python](https://pt.wikipedia.org/wiki/Monty_Python) (se tiver curiosidade, é possível encontrar alguns títulos no Netflix).
 
 ![Fonte: https://www.esquire.com/entertainment/movies/a25270/monty-python-meaning-of-life-review/](monty-python.jpg){: .figure }
 
@@ -15,17 +15,15 @@ A linguagem Python foi desenvolvida por [Guido van Rossum](https://en.wikipedia.
 
 Neste primeiro _handout_ vamos desenvolver nossos primeiros programas em Python, utilizando os seguintes conceitos básicos de programação: operações matemáticas, variáveis e funções.
 
-!!! progress
-Continuar
+!!! progress "Continuar"
 
 ## Instalação :inbox_tray:
 
 Neste handout estamos assumindo que você já instalou o Python e o Visual Studio Code. Se você ainda não fez isso, consulte o [handout de configuração](../../../../sobre/configuracao/index.md) antes de prosseguir. Vamos também precisar do exercício "Olá mundo!" aberto.
 
-[Acessar exercício "Olá mundo!"](../exercises/ola_mundo/index.md){ .md-button }
+[Acessar exercício "Olá mundo!"](../exercises/ola_mundo/index.md){ .ah-button }
 
-!!! progress
-Estou com exercício "Olá mundo!" aberto
+!!! progress "Estou com exercício "Olá mundo!" aberto"
 
 ## Olá Mundo! :earth_americas:
 
@@ -37,7 +35,7 @@ Quando vamos aprender uma nova linguagem de programação é comum escrevermos u
 ![Computador dizendo 'Hello, world!'](hello_world.png){: .figure width=40% }
 
 !!! exercise choice id_rodar_codigo_e_ver_resultado
-O código original desse exercício era:
+    O código original desse exercício era:
 
     ```python
     print('Olá mundo!')
