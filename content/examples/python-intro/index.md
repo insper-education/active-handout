@@ -52,19 +52,18 @@ Quando vamos aprender uma nova linguagem de programação é comum escrevermos u
 
     O que aconteceu ao executar o seu primeiro código?
 
-    - [X] Foi impresso `#!python Olá mundo!` no terminal.
-    - [ ] Foi impresso `#!python Hello, world!` no terminal.
-    - [ ] Foi impresso `#!python Hello, mundo!` no terminal.
+    - [X] Foi impresso `Olá mundo!` no terminal.
+    - [ ] Foi impresso `Hello, world!` no terminal.
+    - [ ] Foi impresso `Hello, mundo!` no terminal.
     - [ ] Não imprimiu nada no terminal.
 
     !!! answer
-        O texto `#!python Olá mundo!` foi impresso no terminal.
+        O texto `Olá mundo!` foi impresso no terminal.
 
         Parabéns! :tada:
         Você escreveu seu primeiro código em Python.
 
-!!! progress
-Continuar
+!!! progress "Continuar"
 
 ### Entendendo nosso primeiro programa
 
@@ -73,7 +72,7 @@ Nosso código possui apenas uma linha, mas já contém diversos conceitos import
 Comecemos pela a função `#!python print`. Essa função é utilizada para mostrar texto no terminal. Podemos entender uma função como um comando do Python, ou seja, estamos dizendo para o computador **fazer** algo. A ação de mostrar algo na tela depende de uma informação adicional: o que deve ser mostrado. Essa informação da qual a ação depende é chamada de **argumento da função**. No nosso exemplo, o argumento da função `#!python print` é o texto `#!python 'Hello, world!'`.
 
 !!! exercise choice id_print_argumento_funcao
-Considere o código a seguir:
+    Considere o código a seguir:
 
     `#!python print('Python')`
 
@@ -86,13 +85,12 @@ Considere o código a seguir:
     !!! answer
         O argumento da função é `#!python 'Python'`, pois é a informação adicional que estamos passando para a função `#!python print`.
 
-!!! progress
-Continuar
+!!! progress "Continuar"
 
 Um último detalhe importante é o uso das aspas. Para indicar que `#!python Hello, world!` é um texto, nós utilizamos aspas, que podem ser simples ou duplas. Isso é muito importante, pois o que estiver entre aspas será considerado pelo Python como texto (que chamamos de _string_) e não como um comando (por exemplo a função `#!python print`).
 
 !!! exercise choice id*eh_ou_nao_string
-Qual das opções a seguir **NÃO** é considerado texto (\_string*) pelo Python?
+    Qual das opções a seguir **NÃO** é considerado texto (\_string*) pelo Python?
 
     - [ ] `#!python "Hello, world!"`
     - [ ] `#!python 'Olá mundo!'`
@@ -102,11 +100,10 @@ Qual das opções a seguir **NÃO** é considerado texto (\_string*) pelo Python
     !!! answer
         O trecho de código `#!python print` será considerado como um comando, pois não possui aspas simples ou duplas.
 
-!!! progress
-Continuar
+!!! progress "Continuar"
 
 !!! info "Dica Pro: documente o código!"
-Uma lição a ser aprendida é que passamos **muito** mais tempo lendo código pré-existente do que escrevendo código novo. Por isso a documentação do código é uma prática extremamente importante. A documentação pode ser feita por meio de comentários, trechos de texto que não afetam o comportamento do programa, que ajudam o leitor (seja algum colega de trabalho que não conhece o código ou você mesmo algum tempo no futuro) a compreender o código.
+    Uma lição a ser aprendida é que passamos **muito** mais tempo lendo código pré-existente do que escrevendo código novo. Por isso a documentação do código é uma prática extremamente importante. A documentação pode ser feita por meio de comentários, trechos de texto que não afetam o comportamento do programa, que ajudam o leitor (seja algum colega de trabalho que não conhece o código ou você mesmo algum tempo no futuro) a compreender o código.
 
     Veja a seguir um exemplo do mesmo programa que acabamos de executar, mas com documentação:
 
@@ -122,11 +119,10 @@ Uma lição a ser aprendida é que passamos **muito** mais tempo lendo código p
 
     Esse primeiro programa ainda é muito simples, mas conforme formos desenvolvendo programas mais complexos os comentários se tornam cada vez mais relevantes.
 
-!!! progress
-Continuar
+!!! progress "Continuar"
 
 !!! exercise choice id_executa_ou_nao_comentario
-Considere o código a seguir:
+    Considere o código a seguir:
 
     ```python
     """
@@ -156,13 +152,11 @@ Considere o código a seguir:
         Será impresso `Testando comentários em Python!`.
         Como o trecho de código `#!python print("Comentários")` está entre `#!python """`, o Python está ignorando esse trecho de código.
 
-!!! progress
-Continuar
+!!! progress "Continuar"
 
 !!! info "Buscando ajuda"
-Depois de pensar e tentar resolver problemas por conta própria e não encontrar a solução, não tenha vergonha de procurar ajuda na internet. Até mesmo programadores experientes fazem isso. É importante, entretanto, saber como fazer essas buscas: que termos usar, quais respostas confiar, etc. Você vai desenvolver uma intuição conforme for ganhando experiência, mas para te ajudar neste começo, escrevemos um [pequeno guia com algumas dicas](../../../buscando-ajuda).
+    Depois de pensar e tentar resolver problemas por conta própria e não encontrar a solução, não tenha vergonha de procurar ajuda na internet. Até mesmo programadores experientes fazem isso. É importante, entretanto, saber como fazer essas buscas: que termos usar, quais respostas confiar, etc. Você vai desenvolver uma intuição conforme for ganhando experiência, mas para te ajudar neste começo, escrevemos um [pequeno guia com algumas dicas](../../../buscando-ajuda).
 
-!!! progress
-Continuar
+!!! progress "Continuar"
 
 Agora vamos ver as operações matemáticas [operações matemáticas](../operacoes-matematicas/index.md).
