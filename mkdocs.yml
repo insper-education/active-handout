@@ -49,8 +49,9 @@ nav:
   - Python:
       - Introdução:
           - examples/python-intro/index.md
-          - examples/python-intro/python-code.md
   - Reference:
+      - reference/syntax-highlighting/index.md
+      - reference/tabbed-content/index.md
       - reference/basic-editing/index.md
       - reference/advanced-editing/index.md
       - reference/slides/index.md
