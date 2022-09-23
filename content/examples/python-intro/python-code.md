@@ -2,7 +2,7 @@
 
 You can wrap inline code between backticks (`` ` ``) to apply syntax highlighting. Example: `` `#!python print('Hello world')` `` will be rendered as `#!python print('Hello world')`.
 
-You can also wrap multiline code between triple backticks (`` ``` ``). Example:
+You can also use [Fenced Code Blocks](https://python-markdown.github.io/extensions/fenced_code_blocks/), i.e., wrap multiline code between triple backticks (`` ``` ``). Example:
 
     ```python
     def func(arg1, arg2):

@@ -1,8 +1,6 @@
 site_name: Active Handout
 
 theme:
-  features:
-    - navigation.tabs
   name: active-handout-theme
 
 docs_dir: content
