@@ -52,7 +52,7 @@ Quando vamos aprender uma nova linguagem de programação é comum escrevermos u
 
     O que aconteceu ao executar o seu primeiro código?
 
-    - [X] Foi impresso `Olá mundo!` no terminal.
+    - [X] Foi impresso `Olá mundo!` no terminal. Texto mais comprido para ver o que acontece com quebras de linha.
     - [ ] Foi impresso `Hello, world!` no terminal.
     - [ ] Foi impresso `Hello, mundo!` no terminal.
     - [ ] Não imprimiu nada no terminal.
