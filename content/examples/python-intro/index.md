@@ -74,7 +74,9 @@ Comecemos pela a função `#!python print`. Essa função é utilizada para most
 !!! exercise choice id_print_argumento_funcao
     Considere o código a seguir:
 
-    `#!python print('Python')`
+    ```python
+    print('Python')
+    ```
 
     Qual é o argumento da função?
 
@@ -87,10 +89,10 @@ Comecemos pela a função `#!python print`. Essa função é utilizada para most
 
 !!! progress "Continuar"
 
-Um último detalhe importante é o uso das aspas. Para indicar que `#!python Hello, world!` é um texto, nós utilizamos aspas, que podem ser simples ou duplas. Isso é muito importante, pois o que estiver entre aspas será considerado pelo Python como texto (que chamamos de _string_) e não como um comando (por exemplo a função `#!python print`).
+Um último detalhe importante é o uso das aspas. Para indicar que `Hello, world!` é um texto, nós utilizamos aspas, que podem ser simples ou duplas. Isso é muito importante, pois o que estiver entre aspas será considerado pelo Python como texto (que chamamos de _string_) e não como um comando (por exemplo a função `#!python print`).
 
-!!! exercise choice id*eh_ou_nao_string
-    Qual das opções a seguir **NÃO** é considerado texto (\_string*) pelo Python?
+!!! exercise choice id_eh_ou_nao_string
+    Qual das opções a seguir **NÃO** é considerado texto (*string*) pelo Python?
 
     - [ ] `#!python "Hello, world!"`
     - [ ] `#!python 'Olá mundo!'`
