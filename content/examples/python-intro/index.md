@@ -67,7 +67,7 @@ Quando vamos aprender uma nova linguagem de programação é comum escrevermos u
 
 ### Entendendo nosso primeiro programa
 
-Nosso código possui apenas uma linha, mas já contém diversos conceitos importantes. Não se preocupe se não entender toda a explicação a seguir, tudo ficará mais claro conforme formos aprendendo mais. A linha `#!python print('Olá mundo!')` pode ser lida como: "Python, por favor, mostre na tela o texto `#!python Olá mundo!`. Vamos por partes.
+Nosso código possui apenas uma linha, mas já contém diversos conceitos importantes. Não se preocupe se não entender toda a explicação a seguir, tudo ficará mais claro conforme formos aprendendo mais. A linha `#!python print('Olá mundo!')` pode ser lida como: "Python, por favor, mostre na tela o texto `Olá mundo!`. Vamos por partes.
 
 Comecemos pela a função `#!python print`. Essa função é utilizada para mostrar texto no terminal. Podemos entender uma função como um comando do Python, ou seja, estamos dizendo para o computador **fazer** algo. A ação de mostrar algo na tela depende de uma informação adicional: o que deve ser mostrado. Essa informação da qual a ação depende é chamada de **argumento da função**. No nosso exemplo, o argumento da função `#!python print` é o texto `#!python 'Hello, world!'`.
 
