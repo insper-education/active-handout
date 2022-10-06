@@ -16,6 +16,7 @@ extra_javascript:
 
 markdown_extensions:
   - active-handout-plugins
+  - footnotes
   - markdown.extensions.admonition
   - pymdownx.tasklist:
       custom_checkbox: true

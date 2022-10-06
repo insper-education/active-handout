@@ -9,7 +9,20 @@ O nome **Python** teve a sua origem no grupo humorístico britânico [Monty Pyth
 
 ![Fonte: https://www.esquire.com/entertainment/movies/a25270/monty-python-meaning-of-life-review/](monty-python.jpg){: .figure }
 
-A linguagem Python foi desenvolvida por [Guido van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum) no início da década de 1990. Apesar de ser uma linguagem relativamente antiga, o seu uso apresentou [um crescimento significativo nos últimos anos](https://stackoverflow.blog/2017/09/06/incredible-growth-python/) e é hoje uma das linguagens de programação mais populares no mundo, sendo [amplamente utilizada por grandes empresas](https://www.python.org/about/quotes/) como Google, Netflix, Nasa, Dropbox, e muitos outros.
+A linguagem Python foi desenvolvida por [Guido van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum)[^1] no início da década de 1990. Apesar de ser uma linguagem relativamente antiga, o seu uso apresentou [um crescimento significativo nos últimos anos](https://stackoverflow.blog/2017/09/06/incredible-growth-python/) e é hoje uma das linguagens de programação mais [populares]()[^2] no mundo, sendo [amplamente utilizada por grandes empresas](https://www.python.org/about/quotes/) como Google, Netflix, Nasa, Dropbox, e muitos outros.
+
+[^1]:
+    The first paragraph of the definition.
+
+    Paragraph two of the definition.
+
+    > A blockquote with
+    > multiple lines.
+
+        a code block
+
+    A final paragraph.
+[^2]: Something else
 
 ![Logo de algumas empresas que utilizam a linguagem Python](logos.png){: .figure width=70%}
 
