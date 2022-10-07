@@ -5,28 +5,18 @@ subtitle: Variáveis e Operações Matemáticas
 
 ## O Python :snake:
 
-O nome **Python** teve a sua origem no grupo humorístico britânico [Monty Python](https://pt.wikipedia.org/wiki/Monty_Python) (se tiver curiosidade, é possível encontrar alguns títulos no Netflix).
+A linguagem [**Python**]()[^1] foi desenvolvida por [Guido van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum) no início da década de 1990. Apesar de ser uma linguagem relativamente antiga, o seu uso apresentou [um crescimento significativo nos últimos anos](https://stackoverflow.blog/2017/09/06/incredible-growth-python/) e é hoje uma das linguagens de programação mais populares no mundo, sendo [amplamente utilizada por grandes empresas](https://www.python.org/about/quotes/) como Google, Netflix, Nasa, Dropbox, e muitos outros.
 
-![Fonte: https://www.esquire.com/entertainment/movies/a25270/monty-python-meaning-of-life-review/](monty-python.jpg){: .figure }
+[^1]: O nome Python teve a sua origem no grupo humorístico britânico [Monty Python](https://pt.wikipedia.org/wiki/Monty_Python) (se tiver curiosidade, é possível encontrar alguns títulos no Netflix).
 
-A linguagem Python foi desenvolvida por [Guido van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum)[^1] no início da década de 1990. Apesar de ser uma linguagem relativamente antiga, o seu uso apresentou [um crescimento significativo nos últimos anos](https://stackoverflow.blog/2017/09/06/incredible-growth-python/) e é hoje uma das linguagens de programação mais [populares]()[^2] no mundo, sendo [amplamente utilizada por grandes empresas](https://www.python.org/about/quotes/) como Google, Netflix, Nasa, Dropbox, e muitos outros.
-
-[^1]:
-    The first paragraph of the definition.
-
-    Paragraph two of the definition.
-
-    > A blockquote with
-    > multiple lines.
-
-        a code block
-
-    A final paragraph.
-[^2]: Something else
+    ![Fonte: https://www.esquire.com/entertainment/movies/a25270/monty-python-meaning-of-life-review/](monty-python.jpg){: .figure }
 
 ![Logo de algumas empresas que utilizam a linguagem Python](logos.png){: .figure width=70%}
 
-Neste primeiro _handout_ vamos desenvolver nossos primeiros programas em Python, utilizando os seguintes conceitos básicos de programação: operações matemáticas, variáveis e funções.
+Neste primeiro [_handout_]()[^2] vamos desenvolver nossos primeiros programas em Python, utilizando os seguintes conceitos básicos de programação: operações matemáticas, variáveis e funções.
+
+[^2]:
+    Durante o curso utilizaremos muitos *handouts*. Você deve seguir a leitura realizando os exercícios propostos em ordem.
 
 !!! progress "Continuar"
 
