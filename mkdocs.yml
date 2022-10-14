@@ -47,9 +47,6 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Python:
-      - Introdução:
-          - examples/python-intro/index.md
   - Reference:
       - reference/syntax-highlighting/index.md
       - reference/tabbed-content/index.md
