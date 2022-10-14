@@ -146,7 +146,7 @@ Lists can be made as follows:
 
 ## Images
 
-Images you insert as in plain markdown: ![](image_path), but you have the advantage of being able to change the dimensions with `{width=...}`.
+Images you insert as in plain markdown: `![](image_path)`, but you have the advantage of being able to change the dimensions with `{width=...}`.
 
 === "Result"
     ![](icon-elementos.png)
