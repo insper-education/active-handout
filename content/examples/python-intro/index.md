@@ -24,7 +24,7 @@ Neste primeiro [_handout_]()[^2] vamos desenvolver nossos primeiros programas em
 
 Neste handout estamos assumindo que você já instalou o Python e o Visual Studio Code. Se você ainda não fez isso, consulte o [handout de configuração](../../../../sobre/configuracao/index.md) antes de prosseguir. Vamos também precisar do exercício "Olá mundo!" aberto.
 
-[Acessar exercício "Olá mundo!"](../exercises/ola_mundo/index.md){ .ah-button }
+[Acessar exercício "Olá mundo!"](../exercises/ola_mundo/index.md){ .ah-button .ah-button--primary }
 
 !!! progress "Estou com exercício "Olá mundo!" aberto"
 
