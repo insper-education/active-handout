@@ -2,6 +2,7 @@ site_name: Active Handout
 
 theme:
   name: active-handout-theme
+  locale: pt_BR
 
 docs_dir: content
 site_dir: docs
