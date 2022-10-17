@@ -42,7 +42,7 @@ Try answering the quiz bellow. Answers persist page refreshes, so students won't
 #### two columns
 
 ```
-!!! exercise choice two-cols "Question"
+!!! exercise choice two-cols
     Text of the question.
 
     - [ ] option 1
@@ -53,7 +53,7 @@ Try answering the quiz bellow. Answers persist page refreshes, so students won't
         Text explaining correct answer. Only shown after option is selected.
 ```
 
-!!! exercise choice two-cols "Question"
+!!! exercise choice two-cols
     Text of the question.
 
     - [ ] option 1
