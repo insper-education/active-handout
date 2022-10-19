@@ -1,6 +1,6 @@
 # Parsons problems
 
-!!! question parsons
+!!! exercise parsons
     bla bla bla
 
     ```python
@@ -11,8 +11,7 @@
         return 4
     ```
 
-
-!!! question parsons
+!!! exercise parsons
     bla bla bla222
 
     ```python
