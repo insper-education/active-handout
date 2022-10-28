@@ -27,6 +27,7 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.highlight:
       anchor_linenums: true
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
@@ -61,6 +62,7 @@ nav:
       - reference/progress-check/index.md
       - reference/video/index.md
       - reference/parsons.md
+      - reference/css-exercise/index.md
       - reference/footnotes/index.md
       # - reference/terminal/index.md
       #- reference/notify-content-update/index.md
