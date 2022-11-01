@@ -1,11 +1,11 @@
 # CSS Exercise
 
-With this plugin you can add a CSS exercise that includes a code editor.
+With this plugin you can add a CSS exercise that includes a code editor. You can provide additional hidden files with the class `hidden-file`.
 
 !!! exercise css-exercise
     Problem description.
 
-    ```html
+    ```{.html .hidden-file}
     <div class="parent">
       <div class="child a">A</div>
       <div class="child b">B</div>
@@ -13,16 +13,21 @@ With this plugin you can add a CSS exercise that includes a code editor.
     </div>
     ```
 
-    ```css
+    ```{.css .hidden-file .filename-base}
     p {
       margin: 1rem 1rem 0;
     }
 
     .parent {
+        box-sizing: border-box;
+        height: 100vh;
+    }
+    ```
+
+    ```css
+    .parent {
       display: flex;
       flex-direction: row;
-      height: 200px;
-      margin: 1rem;
       padding: .5rem;
       background-color: silver;
     }
