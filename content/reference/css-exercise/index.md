@@ -3,7 +3,11 @@
 With this plugin you can add a CSS exercise that includes a code editor. You can provide additional hidden files with the class `hidden-file`.
 
 !!! exercise css-exercise
-    Problem description.
+    Change the value of the `flex-direction` such that the children are in the following order:
+
+    - C in the top;
+    - B in the middle;
+    - A in the bottom.
 
     ```{.html .hidden-file}
     <div class="parent">
@@ -29,27 +33,30 @@ With this plugin you can add a CSS exercise that includes a code editor. You can
       display: flex;
       flex-direction: row;
       padding: .5rem;
-      background-color: silver;
-    }
-
-    .a {
-      order: 0;
-    }
-
-    .b {
-      order: 1;
-    }
-
-    .c {
-      order: 0;
+      background-color: #49D49D;
     }
 
     .child {
       margin: .5rem;
       padding: .5rem;
-      background-color: gold;
+      background-color: #E15A97;
+      color: white;
     }
     ```
 
     !!! answer
-        This is the answer.
+        ```css
+        .parent {
+            display: flex;
+            flex-direction: column-reverse;
+            padding: .5rem;
+            background-color: #49D49D;
+        }
+
+        .child {
+            margin: .5rem;
+            padding: .5rem;
+            background-color: #E15A97;
+            color: white;
+        }
+        ```
