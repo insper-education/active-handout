@@ -3,11 +3,7 @@
 With this plugin you can add a CSS exercise that includes a code editor. You can provide additional hidden files with the class `hidden-file`.
 
 !!! exercise css-exercise
-    Change the value of the `flex-direction` such that the children are in the following order:
-
-    - C in the top;
-    - B in the middle;
-    - A in the bottom.
+    Change the value of the `flex-direction` such that the children match the expected result:
 
     ```{.html .hidden-file}
     <div class="parent">
