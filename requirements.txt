@@ -1,8 +1,1 @@
-# Direct dependencies
-mkdocs
-mkdocs-material
-Pygments
-markdown
-pymdown-extensions
-mkdocs-git-revision-date-localized-plugin
-git+https://github.com/insper-education/active-handout-plugins-py.git@v0.3b
+git+https://github.com/insper-education/active-handout-plugins-py.git@v0.3b3

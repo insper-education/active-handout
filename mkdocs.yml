@@ -1,9 +1,8 @@
 site_name: Active Handout
 
 theme:
-  features:
-    - navigation.tabs
   name: active-handout-theme
+  locale: pt_BR
 
 docs_dir: content
 site_dir: docs
@@ -17,13 +16,19 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 markdown_extensions:
-  - active-handout-plugins
+  - active-handout-plugins:
+      locale: pt_BR
+  - footnotes
   - markdown.extensions.admonition
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.details
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.magiclink
   - pymdownx.critic:
@@ -37,18 +42,25 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - attr_list
-
+  - pymdownx.tilde
+  - pymdownx.snippets:
+      base_path: code
+      check_paths: true
 
 nav:
   - Home: index.md
   - Reference:
+      - reference/syntax-highlighting/index.md
+      - reference/tabbed-content/index.md
       - reference/basic-editing/index.md
       - reference/advanced-editing/index.md
       - reference/slides/index.md
       - reference/exercise/index.md
-      - reference/quiz/index.md
+      - reference/multiple-choice/index.md
       - reference/text-questions/index.md
       - reference/progress-check/index.md
       - reference/video/index.md
+      - reference/parsons.md
+      - reference/footnotes/index.md
       # - reference/terminal/index.md
       #- reference/notify-content-update/index.md
