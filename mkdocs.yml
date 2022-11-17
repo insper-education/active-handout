@@ -11,13 +11,14 @@ site_url: https://insper-education.github.io/active-handout/
 repo_name: "Active Handout"
 repo_url: https://github.com/insper-education/active-handout
 edit_uri: edit/main/content/
-backend_url: https://devlife-api.insper-comp.com.br
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
-  - active-handout
+  - active-handout:
+      telemetry: true
+      backend_url: https://devlife-api.insper-comp.com.br
 
 markdown_extensions:
   - footnotes
