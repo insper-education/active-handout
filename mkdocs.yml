@@ -18,7 +18,7 @@ extra_javascript:
 plugins:
   - active-handout:
       telemetry: true
-      backend_url: https://devlife-api.insper-comp.com.br
+      backend_url: https://devlife-api.insper-comp.com.br/api/
 
 markdown_extensions:
   - footnotes
