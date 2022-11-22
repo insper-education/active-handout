@@ -19,6 +19,7 @@ plugins:
   - active-handout:
       telemetry: true
       backend_url: https://devlife-api.insper-comp.com.br/api/
+      course_slug: Active Handout Example 2022
 
 markdown_extensions:
   - footnotes
