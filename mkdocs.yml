@@ -2,7 +2,7 @@ site_name: Active Handout
 
 theme:
   name: active-handout-theme
-  locale: pt_BR
+  # locale: pt_BR
 
 docs_dir: content
 site_dir: docs
@@ -15,9 +15,16 @@ edit_uri: edit/main/content/
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
+plugins:
+  - active-handout:
+      telemetry: true
+      backend_url: https://example-backend.com.br/api/
+      course_slug: Active Handout Example 2022
+
+hooks:
+  - hooks/custom_exercise.py
+
 markdown_extensions:
-  - active-handout-plugins:
-      locale: pt_BR
   - footnotes
   - markdown.extensions.admonition
   - pymdownx.tasklist:
@@ -56,6 +63,7 @@ nav:
       - reference/advanced-editing/index.md
       - reference/slides/index.md
       - reference/exercise/index.md
+      - reference/custom-exercise/index.md
       - reference/multiple-choice/index.md
       - reference/text-questions/index.md
       - reference/progress-check/index.md
