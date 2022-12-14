@@ -2,7 +2,7 @@ site_name: Active Handout
 
 theme:
   name: active-handout-theme
-  locale: pt_BR
+  # locale: pt_BR
 
 docs_dir: content
 site_dir: docs
@@ -20,6 +20,9 @@ plugins:
       telemetry: true
       backend_url: https://example-backend.com.br/api/
       course_slug: Active Handout Example 2022
+
+hooks:
+  - hooks/custom_exercise.py
 
 markdown_extensions:
   - footnotes
@@ -60,6 +63,7 @@ nav:
       - reference/advanced-editing/index.md
       - reference/slides/index.md
       - reference/exercise/index.md
+      - reference/custom-exercise/index.md
       - reference/multiple-choice/index.md
       - reference/text-questions/index.md
       - reference/progress-check/index.md
