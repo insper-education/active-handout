@@ -34,8 +34,8 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.highlight:
       anchor_linenums: true
+      pygments_lang_class: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.magiclink
   - pymdownx.critic:
@@ -51,7 +51,7 @@ markdown_extensions:
   - attr_list
   - pymdownx.tilde
   - pymdownx.snippets:
-      base_path: code
+      base_path: content
       check_paths: true
 
 nav:
@@ -70,5 +70,6 @@ nav:
       - reference/video/index.md
       - reference/parsons.md
       - reference/footnotes/index.md
+      - reference/code-editor/index.md
       # - reference/terminal/index.md
       #- reference/notify-content-update/index.md

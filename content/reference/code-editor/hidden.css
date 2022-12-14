@@ -1,0 +1,5 @@
+body {
+  /* This file will not be displayed,
+  but a div with this content will exist */
+  color: lime;
+}
