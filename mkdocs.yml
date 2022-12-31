@@ -84,5 +84,6 @@ nav:
       - reference/parsons.md
       - reference/footnotes/index.md
       - reference/code-editor/index.md
+      - reference/dashboard/index.md
       # - reference/terminal/index.md
       #- reference/notify-content-update/index.md
