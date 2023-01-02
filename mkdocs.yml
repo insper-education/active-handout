@@ -21,18 +21,13 @@ plugins:
       backend_url: https://example-backend.com.br/api/
       course_slug: Active Handout Example 2022
       tag_tree:
-        reference:
-          name: Main
-          children:
-            parsons-exercise: Parsons Exercise
-            text-exercise: Text exercise
-        grandparent-tag:
-          name: Grandparent
-          children:
-            parent-tag:
-              name: Parent
-              children:
-                child-tag: "Tag"
+        - reference:
+            - choice
+            - parsons-exercise
+            - text-exercise
+        - grandparent-tag:
+            - parent-tag:
+                - child-tag
 
 hooks:
   - hooks/custom_exercise.py
