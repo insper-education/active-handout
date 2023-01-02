@@ -3,6 +3,13 @@
 You can add a dashboard with `!!! dashboard`:
 
 !!! dashboard
+    This content will be displayed if the user is not logged in.
+
+    Any valid markdown text should be fine here.
+
+    ```
+    Example raw text.
+    ```
 
 To add the dashboard, define a `tag_tree` in Active Handout's settings (`mkdocs.yml`). Example:
 
@@ -13,17 +20,13 @@ plugins:
       backend_url: https://example-backend.com.br/api/
       course_slug: Active Handout Example 2022
       tag_tree:
-        parsons-exercise: Parsons Exercise
-        long-text: Long text exercise
-        text-exercise: Regular text exercise
-        short-text: Short text exercise
-        grandparent-tag:
-          name: Grandparent
-          children:
-            parent-tag:
-              name: Parent
-              children:
-                child-tag: "Tag"
+        - reference:
+            - choice
+            - parsons-exercise
+            - text-exercise
+        - grandparent-tag:
+            - parent-tag:
+                - child-tag
 ```
 
 !!! important

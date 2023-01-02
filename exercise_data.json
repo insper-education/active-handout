@@ -55,29 +55,29 @@
     "reference/text-questions/": {
       "short_1": {
         "tags": [
-          "text-exercise",
           "short-text",
-          "reference"
+          "reference",
+          "text-exercise"
         ],
         "slug": "reference/text-questions/short_1"
       },
       "long_2": {
         "tags": [
-          "text-exercise",
           "long-text",
-          "reference"
+          "reference",
+          "text-exercise"
         ],
         "slug": "reference/text-questions/long_2"
       }
     }
   },
   "tags": {
-    "parsons-exercise": "Parsons Problem",
-    "text-exercise": "Text question",
-    "short-text": "Short text answer",
-    "random-question": "Random question",
     "choice-exercise": "Multiple choice",
     "long-text": "Long text answer",
-    "reference": "Reference"
+    "reference": "Reference",
+    "text-exercise": "Text question",
+    "random-question": "Random question",
+    "parsons-exercise": "Parsons Problem",
+    "short-text": "Short text answer"
   }
 }
