@@ -4,15 +4,15 @@
     "reference/parsons/": {
       "parsons_1": {
         "tags": [
-          "parsons-exercise",
-          "reference"
+          "reference",
+          "parsons-exercise"
         ],
         "slug": "reference/parsons/parsons_1"
       },
       "parsons_2": {
         "tags": [
-          "parsons-exercise",
-          "reference"
+          "reference",
+          "parsons-exercise"
         ],
         "slug": "reference/parsons/parsons_2"
       }
@@ -20,8 +20,8 @@
     "reference/custom-exercise/": {
       "random-question_1": {
         "tags": [
-          "random-question",
-          "reference"
+          "reference",
+          "random-question"
         ],
         "slug": "reference/custom-exercise/random-question_1"
       }
@@ -37,16 +37,16 @@
     "reference/multiple-choice/": {
       "choice_1": {
         "tags": [
-          "choice-exercise",
-          "reference"
+          "reference",
+          "choice-exercise"
         ],
         "slug": "reference/multiple-choice/choice_1",
         "answer_idx": 2
       },
       "choice_2": {
         "tags": [
-          "choice-exercise",
-          "reference"
+          "reference",
+          "choice-exercise"
         ],
         "slug": "reference/multiple-choice/choice_2",
         "answer_idx": 2
@@ -55,29 +55,29 @@
     "reference/text-questions/": {
       "short_1": {
         "tags": [
-          "short-text",
+          "text-exercise",
           "reference",
-          "text-exercise"
+          "short-text"
         ],
         "slug": "reference/text-questions/short_1"
       },
       "long_2": {
         "tags": [
-          "long-text",
+          "text-exercise",
           "reference",
-          "text-exercise"
+          "long-text"
         ],
         "slug": "reference/text-questions/long_2"
       }
     }
   },
   "tags": {
-    "choice-exercise": "Multiple choice",
-    "long-text": "Long text answer",
-    "reference": "Reference",
-    "text-exercise": "Text question",
-    "random-question": "Random question",
     "parsons-exercise": "Parsons Problem",
-    "short-text": "Short text answer"
+    "long-text": "Long text answer",
+    "text-exercise": "Text question",
+    "choice-exercise": "Multiple choice",
+    "short-text": "Short text answer",
+    "reference": "Reference",
+    "random-question": "Random question"
   }
 }

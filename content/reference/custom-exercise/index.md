@@ -25,7 +25,7 @@ class RandomQuestionExercise(ExerciseAdmonition):
 
         return f'''
         <p>{random.choice(questions)}</p>
-        <input type="text" value="" name="data"/>
+        <input class="my-custom-input-class" type="text" value="" name="answerToQuestion"/>
         <input class="ah-button ah-button--primary" type="submit" value="Submit"/>
         '''
 ```
@@ -37,5 +37,70 @@ class RandomQuestionExercise(ExerciseAdmonition):
     You can add text here
 ```
 
+## JavaScript
+
+You will also need to add some JavaScript. Example:
+
+```js
+const randomExercises = document.querySelectorAll(".admonition.exercise.random-question");
+randomExercises.forEach(exercise => {
+  const input = exercise.querySelector(".my-custom-input-class");
+
+  exercise.addEventListener("remember", (event) => {
+    const answer = input.value;
+    const points = 1; // Must be a number between 0 and 1
+    // This function should be available in the global object.
+    sendAndCacheData(exercise, answer, points);
+  });
+
+  // This function should also be available in the global object.
+  const { value: prevAnswer, submitted } = getSubmissionCache(exercise);
+  // You should try to resubmit the answer if it couldn't be submitted in previous attempts.
+  if (prevAnswer !== null) {
+    input.value = prevAnswer;
+    const inputs = exercise.querySelectorAll("input");
+    for (const input of inputs) {
+      input.setAttribute("disabled", true);
+    }
+    exercise.classList.add("done")
+    if (!submitted) {
+      const points = 1;
+      sendAndCacheData(exercise, prevAnswer, points);
+    }
+  }
+});
+```
+
 !!! exercise random-question
     You can add text here
+
+<script>
+const randomExercises = document.querySelectorAll(".admonition.exercise.random-question");
+randomExercises.forEach(exercise => {
+    const input = exercise.querySelector(".my-custom-input-class");
+
+    exercise.addEventListener("remember", (event) => {
+        const answer = input.value;
+        const points = 1; // Must be a number between 0 and 1
+        // This function should be available in the global object.
+        sendAndCacheData(exercise, answer, points);
+    });
+
+    // This function should also be available in the global object.
+    const { value: prevAnswer, submitted } = getSubmissionCache(exercise);
+    // You should try to resubmit the answer if it couldn't be submitted in previous attempts.
+    if (prevAnswer !== null) {
+        input.value = prevAnswer;
+        const inputs = exercise.querySelectorAll("input");
+        for (const input of inputs) {
+            input.setAttribute("disabled", true);
+        }
+        exercise.classList.add("done");
+
+        if (!submitted) {
+            const points = 1;
+            sendAndCacheData(exercise, prevAnswer, points);
+        }
+    }
+});
+</script>
