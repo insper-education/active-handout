@@ -4,15 +4,15 @@
     "reference/parsons/": {
       "parsons_1": {
         "tags": [
-          "reference",
-          "parsons-exercise"
+          "parsons-exercise",
+          "reference"
         ],
         "slug": "reference/parsons/parsons_1"
       },
       "parsons_2": {
         "tags": [
-          "reference",
-          "parsons-exercise"
+          "parsons-exercise",
+          "reference"
         ],
         "slug": "reference/parsons/parsons_2"
       }
@@ -20,8 +20,8 @@
     "reference/custom-exercise/": {
       "random-question_1": {
         "tags": [
-          "reference",
-          "random-question"
+          "random-question",
+          "reference"
         ],
         "slug": "reference/custom-exercise/random-question_1"
       }
@@ -37,16 +37,16 @@
     "reference/multiple-choice/": {
       "choice_1": {
         "tags": [
-          "reference",
-          "choice-exercise"
+          "choice-exercise",
+          "reference"
         ],
         "slug": "reference/multiple-choice/choice_1",
         "answer_idx": 2
       },
       "choice_2": {
         "tags": [
-          "reference",
-          "choice-exercise"
+          "choice-exercise",
+          "reference"
         ],
         "slug": "reference/multiple-choice/choice_2",
         "answer_idx": 2
@@ -55,29 +55,29 @@
     "reference/text-questions/": {
       "short_1": {
         "tags": [
+          "short-text",
           "text-exercise",
-          "reference",
-          "short-text"
+          "reference"
         ],
         "slug": "reference/text-questions/short_1"
       },
       "long_2": {
         "tags": [
+          "long-text",
           "text-exercise",
-          "reference",
-          "long-text"
+          "reference"
         ],
         "slug": "reference/text-questions/long_2"
       }
     }
   },
   "tags": {
-    "parsons-exercise": "Parsons Problem",
     "long-text": "Long text answer",
     "text-exercise": "Text question",
-    "choice-exercise": "Multiple choice",
+    "random-question": "Random question",
     "short-text": "Short text answer",
-    "reference": "Reference",
-    "random-question": "Random question"
+    "choice-exercise": "Multiple choice",
+    "parsons-exercise": "Parsons Problem",
+    "reference": "Reference"
   }
 }

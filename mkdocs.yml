@@ -22,7 +22,7 @@ plugins:
       course_slug: Active Handout Example 2022
       tag_tree:
         - reference:
-            - choice
+            - choice-exercise
             - parsons-exercise
             - text-exercise
         - grandparent-tag:
