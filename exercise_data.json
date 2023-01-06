@@ -37,16 +37,16 @@
     "reference/multiple-choice/": {
       "choice_1": {
         "tags": [
-          "choice-exercise",
-          "reference"
+          "reference",
+          "choice-exercise"
         ],
         "slug": "reference/multiple-choice/choice_1",
         "answer_idx": 2
       },
       "choice_2": {
         "tags": [
-          "choice-exercise",
-          "reference"
+          "reference",
+          "choice-exercise"
         ],
         "slug": "reference/multiple-choice/choice_2",
         "answer_idx": 2
@@ -55,29 +55,29 @@
     "reference/text-questions/": {
       "short_1": {
         "tags": [
-          "short-text",
           "text-exercise",
-          "reference"
+          "reference",
+          "short-text"
         ],
         "slug": "reference/text-questions/short_1"
       },
       "long_2": {
         "tags": [
-          "long-text",
           "text-exercise",
-          "reference"
+          "reference",
+          "long-text"
         ],
         "slug": "reference/text-questions/long_2"
       }
     }
   },
   "tags": {
-    "long-text": "Long text answer",
-    "text-exercise": "Text question",
-    "random-question": "Random question",
-    "short-text": "Short text answer",
-    "choice-exercise": "Multiple choice",
-    "parsons-exercise": "Parsons Problem",
-    "reference": "Reference"
+    "parsons-exercise": "parsons-exercise",
+    "short-text": "short-text",
+    "text-exercise": "text-exercise",
+    "random-question": "random-question",
+    "choice-exercise": "choice-exercise",
+    "long-text": "long-text",
+    "reference": "reference"
   }
 }
