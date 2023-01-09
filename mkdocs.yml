@@ -20,6 +20,14 @@ plugins:
       telemetry: true
       backend_url: https://example-backend.com.br/api/
       course_slug: Active Handout Example 2022
+      tag_tree:
+        - reference:
+            - choice-exercise
+            - parsons-exercise
+            - text-exercise
+        - grandparent-tag:
+            - parent-tag:
+                - child-tag
 
 hooks:
   - hooks/custom_exercise.py
@@ -71,5 +79,6 @@ nav:
       - reference/parsons.md
       - reference/footnotes/index.md
       - reference/code-editor/index.md
+      - reference/dashboard/index.md
       # - reference/terminal/index.md
       #- reference/notify-content-update/index.md

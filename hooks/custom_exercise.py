@@ -15,7 +15,7 @@ class RandomQuestionExercise(ExerciseAdmonition):
 
         return f'''
         <p>{random.choice(questions)}</p>
-        <input type="text" value="" name="data"/>
+        <input class="my-custom-input-class" type="text" value="" name="answerToQuestion"/>
         <input class="ah-button ah-button--primary" type="submit" value="Submit"/>
         '''
 

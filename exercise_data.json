@@ -1,0 +1,83 @@
+{
+  "course": "Active Handout Example 2022",
+  "exercises": {
+    "reference/parsons/": {
+      "parsons_1": {
+        "tags": [
+          "parsons-exercise",
+          "reference"
+        ],
+        "slug": "reference/parsons/parsons_1"
+      },
+      "parsons_2": {
+        "tags": [
+          "parsons-exercise",
+          "reference"
+        ],
+        "slug": "reference/parsons/parsons_2"
+      }
+    },
+    "reference/custom-exercise/": {
+      "random-question_1": {
+        "tags": [
+          "random-question",
+          "reference"
+        ],
+        "slug": "reference/custom-exercise/random-question_1"
+      }
+    },
+    "reference/exercise/": {
+      "exercise_1": {
+        "tags": [
+          "reference"
+        ],
+        "slug": "reference/exercise/exercise_1"
+      }
+    },
+    "reference/multiple-choice/": {
+      "choice_1": {
+        "tags": [
+          "reference",
+          "choice-exercise"
+        ],
+        "slug": "reference/multiple-choice/choice_1",
+        "answer_idx": 2
+      },
+      "choice_2": {
+        "tags": [
+          "reference",
+          "choice-exercise"
+        ],
+        "slug": "reference/multiple-choice/choice_2",
+        "answer_idx": 2
+      }
+    },
+    "reference/text-questions/": {
+      "short_1": {
+        "tags": [
+          "text-exercise",
+          "reference",
+          "short-text"
+        ],
+        "slug": "reference/text-questions/short_1"
+      },
+      "long_2": {
+        "tags": [
+          "text-exercise",
+          "reference",
+          "long-text"
+        ],
+        "slug": "reference/text-questions/long_2"
+      }
+    }
+  },
+  "tags": {
+    "parsons-exercise": "parsons-exercise",
+    "short-text": "short-text",
+    "text-exercise": "text-exercise",
+    "random-question": "random-question",
+    "choice-exercise": "choice-exercise",
+    "long-text": "long-text",
+    "reference": "reference"
+  }
+}
