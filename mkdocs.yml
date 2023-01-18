@@ -32,6 +32,11 @@ plugins:
 hooks:
   - hooks/custom_exercise.py
 
+extra:
+  custom_variables:
+    var1: "*variables*"
+    var2: material
+
 markdown_extensions:
   - footnotes
   - markdown.extensions.admonition
@@ -80,5 +85,6 @@ nav:
       - reference/footnotes/index.md
       - reference/code-editor/index.md
       - reference/dashboard/index.md
+      - reference/custom-variables/index.md
       # - reference/terminal/index.md
       #- reference/notify-content-update/index.md
