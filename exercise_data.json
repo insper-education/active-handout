@@ -4,15 +4,15 @@
     "reference/parsons/": {
       "parsons_1": {
         "tags": [
-          "parsons-exercise",
-          "reference"
+          "reference",
+          "parsons-exercise"
         ],
         "slug": "reference/parsons/parsons_1"
       },
       "parsons_2": {
         "tags": [
-          "parsons-exercise",
-          "reference"
+          "reference",
+          "parsons-exercise"
         ],
         "slug": "reference/parsons/parsons_2"
       }
@@ -20,8 +20,8 @@
     "reference/custom-exercise/": {
       "random-question_1": {
         "tags": [
-          "random-question",
-          "reference"
+          "reference",
+          "random-question"
         ],
         "slug": "reference/custom-exercise/random-question_1"
       }
@@ -37,16 +37,16 @@
     "reference/multiple-choice/": {
       "choice_1": {
         "tags": [
-          "reference",
-          "choice-exercise"
+          "choice-exercise",
+          "reference"
         ],
         "slug": "reference/multiple-choice/choice_1",
         "answer_idx": 2
       },
       "choice_2": {
         "tags": [
-          "reference",
-          "choice-exercise"
+          "choice-exercise",
+          "reference"
         ],
         "slug": "reference/multiple-choice/choice_2",
         "answer_idx": 2
@@ -64,20 +64,20 @@
       "long_2": {
         "tags": [
           "text-exercise",
-          "reference",
-          "long-text"
+          "long-text",
+          "reference"
         ],
         "slug": "reference/text-questions/long_2"
       }
     }
   },
   "tags": {
-    "parsons-exercise": "parsons-exercise",
-    "short-text": "short-text",
-    "text-exercise": "text-exercise",
-    "random-question": "random-question",
     "choice-exercise": "choice-exercise",
+    "text-exercise": "text-exercise",
+    "reference": "reference",
+    "random-question": "random-question",
+    "parsons-exercise": "parsons-exercise",
     "long-text": "long-text",
-    "reference": "reference"
+    "short-text": "short-text"
   }
 }
