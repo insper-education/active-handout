@@ -41,3 +41,35 @@ You can also use [Fenced Code Blocks](https://python-markdown.github.io/extensio
         print(func(21, 32))
     ```
     ````
+
+You can also add line numbers:
+
+=== "Result"
+
+    ```python linenums="1"
+    def func(arg1, arg2):
+        """
+        Docstrings
+        """
+        m = max(arg1, arg2)  # Some comment
+        return m
+
+    if __name__=='__main__':
+        print(func(21, 32))
+    ```
+
+=== "Source"
+
+    ````
+    ```python linenums="1"
+    def func(arg1, arg2):
+        """
+        Docstrings
+        """
+        m = max(arg1, arg2)  # Some comment
+        return m
+
+    if __name__=='__main__':
+        print(func(21, 32))
+    ```
+    ````
