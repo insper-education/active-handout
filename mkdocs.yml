@@ -83,8 +83,8 @@ nav:
       - reference/video/index.md
       - reference/parsons.md
       - reference/footnotes/index.md
+      - reference/custom-variables/index.md
       - reference/code-editor/index.md
       - reference/dashboard/index.md
-      - reference/custom-variables/index.md
       # - reference/terminal/index.md
       #- reference/notify-content-update/index.md
