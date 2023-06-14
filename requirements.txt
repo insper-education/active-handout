@@ -1,1 +1,6 @@
+mkdocs
 git+https://github.com/insper-education/active-handout-plugins-py.git
+
+# suggest
+mkdocs-glightbox
+termynal
