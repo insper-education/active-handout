@@ -13,9 +13,12 @@ repo_url: https://github.com/insper-education/active-handout
 edit_uri: edit/main/content/
 
 extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
+  - glightbox
+  - termynal
   - active-handout:
       telemetry: true
       backend_url: https://example-backend.com.br/api/
@@ -86,5 +89,5 @@ nav:
       - reference/custom-variables/index.md
       - reference/code-editor/index.md
       - reference/dashboard/index.md
-      # - reference/terminal/index.md
+      - reference/extra-plugins/index.md
       #- reference/notify-content-update/index.md
