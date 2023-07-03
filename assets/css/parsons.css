@@ -1,0 +1,134 @@
+.parsons-line {
+    cursor: move;
+}
+
+.original-code .parsons-line {
+    border: 1px solid black;
+    padding: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.parsons-drop-area {
+    min-height: 3em;
+}
+
+.parsons-code {
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+.parsons-code .highlight {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+
+    position: relative;
+}
+
+.parsons-code .highlight pre {
+    height: calc(100% - 2em);
+}
+
+.parsons-code .highlight code {
+    height: calc(100%);
+    padding-bottom: 3rem;
+}
+
+.parsons-code .indent-line {
+    position: absolute;
+    width: 0.3rem;
+    display: none;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 10;
+}
+
+.parsons-code .line-drop-active {
+    border: 1px solid black;
+}
+
+div.admonition.question.parsons {
+    position: relative;
+}
+
+@keyframes shakeIt {
+    from {
+        top: 0px;
+        left: 0px;
+    }
+
+    25% {
+        left: -40px;
+    }
+
+    75% {
+        left: 40px;
+    }
+
+    to {
+        top: 0px;
+        left: 0px;
+    }
+}
+
+
+div.admonition.question.parsons.wrong {
+    animation-name: shakeIt;
+    animation-duration: 0.25s;
+    animation-iteration-count: 2;
+}
+
+
+:root {
+    --indent-size: 2rem;
+}
+
+.indent-level-1 {
+    position: relative;
+    padding-left: var(--indent-size);
+}
+
+.indent-level-2 {
+    position: relative;
+    padding-left: calc(2 * var(--indent-size));
+}
+
+.indent-level-3 {
+    position: relative;
+    padding-left: calc(3 * var(--indent-size));
+}
+
+
+.indent-level-4 {
+    position: relative;
+    padding-left: calc(4 * var(--indent-size));
+}
+
+
+.indent-level-5 {
+    position: relative;
+    padding-left: calc(5 * var(--indent-size));
+}
+
+
+.indent-level-6 {
+    position: relative;
+    padding-left: calc(6 * var(--indent-size));
+}
+
+.indent-level-7 {
+    position: relative;
+    padding-left: calc(7 * var(--indent-size));
+}
+
+
+.indent-level-8 {
+    position: relative;
+    padding-left: calc(8 * var(--indent-size));
+}
+
+
+.indent-level-9 {
+    position: relative;
+    padding-left: calc(9 * var(--indent-size));
+}

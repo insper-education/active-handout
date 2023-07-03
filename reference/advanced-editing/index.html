@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+      
+        <title>Markdown extensions - Active Handout</title>
+      
+    
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Oxygen+Mono|Source+Sans+Pro:700|Source+Serif+Pro&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <script>
+      // SETUP GLOBAL CONSTANTS
+      var base_url = '../..';
+      
+      var telemetryEnabled = true;
+      var backendUrl = "https://example-backend.com.br/api/";
+      var courseSlug = "Active Handout Example 2022";
+      
+      
+      var dashboardEnabled = true;
+      var tagTree = [{'reference': ['choice-exercise', 'parsons-exercise', 'text-exercise']}, {'grandparent-tag': [{'parent-tag': ['child-tag']}]}];
+      
+
+      // SETUP PLUGIN
+      window.initialized = false;
+      if (!window.initializers) window.initializers = [];
+      window.registerInitializer = (initialize) => {
+        if (window.initialized) initialize();
+        else window.initializers.push(initialize);
+      };
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    <link rel="stylesheet" href="../../termynal.css">
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  <body>
+    <div class="ah-main-container">
+      <header class="ah-header">
+        <button class="ah-menu-btn ah-button ah-button--borderless"
+                aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+</svg>
+        </button>
+        <a href="../.."
+           title="Active Handout"
+           class="ah-logo"
+           aria-label="Active Handout">
+          Active Handout
+        </a>
+        <div class="ah-header--right">
+          
+          
+          
+          <button id="resetHandoutButton">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+</svg></span>
+          </button>
+          
+
+          
+          <div id="user-menu" hx-get="https://example-backend.com.br/api/user-menu" hx-trigger="load"> </div>
+          
+        </div>
+      </header>
+      <nav class="ah-navigation preload">
+        <div class="ah-nav-container">
+          <button class="ah-menu-btn ah-button ah-button--borderless close-menu"
+                  aria-label="close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/>
+</svg>
+          </button>
+          <ul class="ah-nav-body">
+            
+              
+  
+    <li>
+      <a href="../..">Home</a>
+    </li>
+  
+
+            
+              
+  <li class="ah-togglable-item opened">
+    <span class="ah-togglable-handle">Reference</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../syntax-highlighting/">Syntax highlighting</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../tabbed-content/">Tabbed content</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../basic-editing/">Basic text editing with markdown</a>
+    </li>
+  
+
+      
+        
+  
+
+    <li class="active ah-togglable-item opened">
+      <span class="ah-togglable-handle">Markdown extensions</span>
+      <ul>
+        
+          
+            
+            
+              <li class="ah-toc-item">
+                <a href="#emojis">Emojis</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#box-elements">Box elements</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#code-and-syntax-highlighting">Code and Syntax Highlighting</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#tabs">Tabs</a>
+              </li>
+            
+        
+      </ul>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../slides/">Slides</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../exercise/">Exercise</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../custom-exercise/">Custom Exercises</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../multiple-choice/">Multiple Choice Exercises</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../text-questions/">Text questions</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../progress-check/">Progress Check</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../video/">Videos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../parsons/">Parsons problems</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../footnotes/">Footnotes</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../custom-variables/">Custom Variables</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../code-editor/">Simple code editor</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../dashboard/">Dashboard</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../extra-plugins/">Extra plugins</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+      <main class="ah-content ah-typeset">
+        
+          <div class="ah-title-box">
+            <ul class="ah-breadcrumbs">
+              
+                
+                  
+                    <li>Reference</li>
+                  
+                
+                <li></li>
+            </ul>
+            
+            
+          </div>
+          
+            <section class="progress-section show">
+<h1 id="markdown-extensions">Markdown extensions</h1>
+<p>Markdown supports many extensions that adds other visual elements to text. In this page we describe the ones supported by <em>Interactive Handouts</em>.</p>
+<h2 id="emojis">Emojis</h2>
+<p>You can use emojis from the list <a href="https://github.com/caiyongji/emoji-list">https://github.com/caiyongji/emoji-list</a>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Result</label><label for="__tabbed_1_2">Markdown</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="💕" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f495.svg" title=":two_hearts:" /> <img alt="⭐️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b50.svg" title=":star:" /></p>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code>:two_hearts: :star:
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="box-elements">Box elements</h2>
+<p>Box elements can be use to emphasize text and add interactivity to a handout. All follow the same syntax:</p>
+<div class="language-text highlight"><pre><span></span><code>!!! TYPE
+    content goes here
+</code></pre></div>
+<p>See examples of static box elements below. </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Result</label><label for="__tabbed_2_2">Markdown</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can create different types of box:</p>
+<ul>
+<li>note, example, warning, info, tip, danger</li>
+</ul>
+<p>You only need to change <code>!!! TYPE</code></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Modify the title</p>
+<p>It is possible to modify the box title.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A box inside a box is also possible.</p>
+</div>
+</div>
+<div class="admonition danger">
+<p>This is a box without title. </p>
+</div>
+<details class="info">
+<summary>Info</summary>
+<p>Collapsible boxes are also possible. </p>
+</details>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code>!!! note 
+    You can create different types of box:
+
+    - note, example, warning, info, tip, danger
+
+    You only need to change `!!! TYPE`
+
+!!! example &quot;Modify the title&quot;
+    It is possible to modify the box title.
+
+    !!! warning
+        A box inside a box is also possible.
+
+!!! danger &quot;&quot;
+    This is a box without title.
+
+??? info 
+    Collapsible boxes are also possible.
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="code-and-syntax-highlighting">Code and Syntax Highlighting</h2>
+<h3 id="inline-code">Inline code</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Result</label><label for="__tabbed_3_2">Markdown</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Text surrounded by backticks (the character <code>`</code>) is shown in monospaced font, <code>like this</code>.  </p>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Text surrounded by backticks (the character `` `) is shown in monospaced font, `like this`.  
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="code-blocks">Code blocks</h3>
+<p>Code blocks are started and ended by a line with three backticks. See examples below.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Result</label><label for="__tabbed_4_2">Markdown</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>No highlight
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Emp      ty spaces
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>paragraph     
+</code></pre></div></p>
+<p>Code highlight:</p>
+<div class="language-c highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
+</code></pre></div>
+<p>Block diagram:</p>
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>x---------x           x---------x
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>|         |           |         |
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>| uc      |           | LCD     |
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>|   ------|    spi    |-------  |
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>|   | spi | &lt;---/---&gt; | ili  |  |
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>x---------x           x---------x
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>No highlight:</p>
+<div class="language-text highlight"><pre><span></span><code>```       
+Emp      ty spaces
+paragraph     
+```
+</code></pre></div>
+<p>Code highlight:</p>
+<div class="language-text highlight"><pre><span></span><code>```c
+#include &lt;stdio.h&gt;
+
+int main(void) {
+printf(&quot;Hello world!\n&quot;);
+return 0;
+}
+```
+</code></pre></div>
+<p>Block diagram:</p>
+<div class="language-text highlight"><pre><span></span><code>```
+x---------x           x---------x
+|         |           |         |
+| uc      |           | LCD     |
+|   ------|    spi    |-------  |
+|   | spi | &lt;---/---&gt; | ili  |  |
+x---------x           x---------x
+```
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="tabs">Tabs</h2>
+<p>Tabs can be used to provide another version of the same content.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Result</label><label for="__tabbed_5_2">Markdown</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">C</label><label for="__tabbed_6_2">C++</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-c++ highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello world!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>=== &quot;C&quot;
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    ``` c
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    #include &lt;stdio.h&gt;
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    int main(void) {
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>        printf(&quot;Hello world!\n&quot;);
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>        return 0;
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    }
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    ```
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>=== &quot;C++&quot;
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    ``` c++
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>    #include &lt;iostream&gt;
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>    int main(void) {
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>        std::cout &lt;&lt; &quot;Hello world!&quot; &lt;&lt; std::endl;
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>        return 0;
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>    }
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>    ```
+</code></pre></div>
+</div>
+</div>
+</div>
+
+
+</section>
+          
+        
+      </main>
+      <footer class="ah-footer ah-typeset">
+        <div class="ah-footer-nav">
+          
+            <a href="../basic-editing/"
+               class="ah-prev"
+               title="Basic text editing with markdown">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Basic text editing with markdown</span>
+            </a>
+          
+          
+            <a href="../slides/"
+               class="ah-next"
+               title="Slides">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Slides</span>
+            </a>
+          
+        </div>
+      </footer>
+    </div>
+    
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script src="../../termynal.js"></script>
+    
+  <script>const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});</script></body>
+</html>

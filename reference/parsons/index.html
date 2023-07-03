@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+      
+        <title>Parsons problems - Active Handout</title>
+      
+    
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Oxygen+Mono|Source+Sans+Pro:700|Source+Serif+Pro&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <script>
+      // SETUP GLOBAL CONSTANTS
+      var base_url = '../..';
+      
+      var telemetryEnabled = true;
+      var backendUrl = "https://example-backend.com.br/api/";
+      var courseSlug = "Active Handout Example 2022";
+      
+      
+      var dashboardEnabled = true;
+      var tagTree = [{'reference': ['choice-exercise', 'parsons-exercise', 'text-exercise']}, {'grandparent-tag': [{'parent-tag': ['child-tag']}]}];
+      
+
+      // SETUP PLUGIN
+      window.initialized = false;
+      if (!window.initializers) window.initializers = [];
+      window.registerInitializer = (initialize) => {
+        if (window.initialized) initialize();
+        else window.initializers.push(initialize);
+      };
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    <link rel="stylesheet" href="../../termynal.css">
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  <body>
+    <div class="ah-main-container">
+      <header class="ah-header">
+        <button class="ah-menu-btn ah-button ah-button--borderless"
+                aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+</svg>
+        </button>
+        <a href="../.."
+           title="Active Handout"
+           class="ah-logo"
+           aria-label="Active Handout">
+          Active Handout
+        </a>
+        <div class="ah-header--right">
+          
+          
+          
+          <button id="resetHandoutButton">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+</svg></span>
+          </button>
+          
+
+          
+          <div id="user-menu" hx-get="https://example-backend.com.br/api/user-menu" hx-trigger="load"> </div>
+          
+        </div>
+      </header>
+      <nav class="ah-navigation preload">
+        <div class="ah-nav-container">
+          <button class="ah-menu-btn ah-button ah-button--borderless close-menu"
+                  aria-label="close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/>
+</svg>
+          </button>
+          <ul class="ah-nav-body">
+            
+              
+  
+    <li>
+      <a href="../..">Home</a>
+    </li>
+  
+
+            
+              
+  <li class="ah-togglable-item opened">
+    <span class="ah-togglable-handle">Reference</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../syntax-highlighting/">Syntax highlighting</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../tabbed-content/">Tabbed content</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../basic-editing/">Basic text editing with markdown</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../advanced-editing/">Markdown extensions</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../slides/">Slides</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../exercise/">Exercise</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../custom-exercise/">Custom Exercises</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../multiple-choice/">Multiple Choice Exercises</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../text-questions/">Text questions</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../progress-check/">Progress Check</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../video/">Videos</a>
+    </li>
+  
+
+      
+        
+  
+
+    <li class="active ah-togglable-item opened">
+      <span class="ah-togglable-handle">Parsons problems</span>
+      <ul>
+        
+          
+            
+            
+              <li class="ah-toc-item">
+                <a href="#getting-started">Getting Started</a>
+              </li>
+            
+        
+      </ul>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../footnotes/">Footnotes</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../custom-variables/">Custom Variables</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../code-editor/">Simple code editor</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../dashboard/">Dashboard</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../extra-plugins/">Extra plugins</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+      <main class="ah-content ah-typeset">
+        
+          <div class="ah-title-box">
+            <ul class="ah-breadcrumbs">
+              
+                
+                  
+                    <li>Reference</li>
+                  
+                
+                <li></li>
+            </ul>
+            
+            
+          </div>
+          
+            <section class="progress-section show">
+<h1 id="parsons-problems">Parsons problems</h1>
+<p>With this plugin, you can create Parsons problems. For more details and examples, please refer to the following resources:</p>
+<ul>
+<li><a href="https://pamelafox.github.io/faded-parsons-static/">https://pamelafox.github.io/faded-parsons-static/</a></li>
+<li><a href="https://dl.acm.org/doi/10.1145/3411764.3445228">https://dl.acm.org/doi/10.1145/3411764.3445228</a></li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<p>To utilize the Parsons problems exercises, start by providing an explanation for the student, followed by a code snippet that will be transformed into the exercise. The plugin will automatically mix the lines for you.</p>
+<p>The plugin does not supports:</p>
+<ul>
+<li>Distractors </li>
+<li>Code execution test</li>
+</ul>
+<h3 id="basic">Basic</h3>
+<p>To use the parsons problems exercises you should provide an explanation for the student fallowing by a code that will became the exercise.   </p>
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>!!! exercise parsons
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    Create a dummy code that does nothing:
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    ```py
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    def teste():
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        for i in range(10):
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>            print(i+2)
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        print(&#39;abc&#39;)
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        return 4
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    ```
+</code></pre></div>
+<div class="admonition exercise parsons tag-reference tag-parsons-exercise" data-slug="reference/parsons/parsons_1" id="parsons_1_0">
+<p class="admonition-title">Exercise 1</p>
+<form class="exercise-form">
+<p>Create a dummy code that does nothing:</p>
+<div class="parsons-code">
+<div class="parsons-outer-container">
+    <span class="parsons-block-description">Drag blocks from here</span>
+    <div class="parsons-container highlight original-code">
+        <pre><code class="parsons-area parsons-drag-area">
+<div id="parsons_1-line-0" class="parsons-line-container" data-linecount=0>
+                <button type="button" class="ah-button ah-button--borderless indent-btn indent-btn--remove" disabled>&lt;</button>
+                <div class="parsons-line"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span></div>
+                <button type="button" class="ah-button ah-button--borderless indent-btn indent-btn--add">&gt;</button>
+            </div><div id="parsons_1-line-1" class="parsons-line-container" data-linecount=1>
+                <button type="button" class="ah-button ah-button--borderless indent-btn indent-btn--remove" disabled>&lt;</button>
+                <div class="parsons-line"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span> <span class="nf">teste</span><span class="p">():</span></div>
+                <button type="button" class="ah-button ah-button--borderless indent-btn indent-btn--add">&gt;</button>
+            </div><div id="parsons_1-line-2" class="parsons-line-container" data-linecount=2>
+                <button type="button" class="ah-button ah-button--borderless indent-btn indent-btn--remove" disabled>&lt;</button>
+                <div class="parsons-line"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">)</span></div>
+                <button type="button" class="ah-button ah-button--borderless indent-btn indent-btn--add">&gt;</button>
+            </div><div id="parsons_1-line-3" class="parsons-line-container" data-linecount=3>
+                <button type="button" class="ah-button ah-button--borderless indent-btn indent-btn--remove" disabled>&lt;</button>
+                <div class="parsons-line"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span></div>
+                <button type="button" class="ah-button ah-button--borderless indent-btn indent-btn--add">&gt;</button>
+            </div><div id="parsons_1-line-4" class="parsons-line-container" data-linecount=4>
+                <button type="button" class="ah-button ah-button--borderless indent-btn indent-btn--remove" disabled>&lt;</button>
+                <div class="parsons-line"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">return</span> <span class="mi">4</span></div>
+                <button type="button" class="ah-button ah-button--borderless indent-btn indent-btn--add">&gt;</button>
+            </div></code></pre></div></div>
+<div class="parsons-outer-container">
+    <span class="parsons-block-description">Drop blocks here</span>
+    <div class="parsons-container highlight parsons-drop-div">
+        <pre><code class="parsons-area parsons-drop-area"></code></pre>
+    </div>
+</div>
+</div>
+<div class="form-elements">
+        <input type="hidden" name="data" value=""/>
+        <pre class="parsons-answer">def teste():
+    for i in range(10):
+        print(i+2)
+    print('abc')
+    return 4
+</pre>
+        <div class="ah-btn-group">
+            <input type="button" class="ah-button ah-button--borderless" name="resetButton" value="Reset"/>
+            <input type="button" class="ah-button ah-button--primary" name="sendButton" value="Test"/>
+        </div>
+        </div>
+</form>
+<div class="admonition answer no-indent">
+<p class="admonition-title">Answer</p>
+<p class="wrong-answer">Wrong answer</p>
+<p class="correct-answer">Correct answer</p>
+</div>
+</div>
+<p>For different applications or languages, you may choose to exclude indentation in the exercise. To do this, use the <code>no-indent</code> option as follows:</p>
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>!!! exercise parsons no-indent
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    Create a dummy code that does nothing with no idetation:
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    ```python
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    def teste():
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        print(&#39;abc&#39;)2
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        for i in range(10):2
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>            print(i+2)2
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        return 42
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    ```
+</code></pre></div>
+<div class="admonition exercise parsons no-indent tag-reference tag-parsons-exercise" data-slug="reference/parsons/parsons_2" id="parsons_2_0">
+<p class="admonition-title">Exercise 2</p>
+<form class="exercise-form">
+<p>Create a dummy code that does nothing with no idetation:</p>
+<div class="parsons-code">
+<div class="parsons-outer-container">
+    <span class="parsons-block-description">Drag blocks from here</span>
+    <div class="parsons-container highlight original-code">
+        <pre><code class="parsons-area parsons-drag-area">
+<div id="parsons_2-line-0" class="parsons-line-container" data-linecount=0>
+                
+                <div class="parsons-line"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span> <span class="nf">teste</span><span class="p">():</span></div>
+                
+            </div><div id="parsons_2-line-1" class="parsons-line-container" data-linecount=1>
+                
+                <div class="parsons-line"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">return</span> <span class="mi">42</span></div>
+                
+            </div><div id="parsons_2-line-2" class="parsons-line-container" data-linecount=2>
+                
+                <div class="parsons-line"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span><span class="mi">2</span></div>
+                
+            </div><div id="parsons_2-line-3" class="parsons-line-container" data-linecount=3>
+                
+                <div class="parsons-line"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="mi">2</span></div>
+                
+            </div><div id="parsons_2-line-4" class="parsons-line-container" data-linecount=4>
+                
+                <div class="parsons-line"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">)</span><span class="mi">2</span></div>
+                
+            </div></code></pre></div></div>
+<div class="parsons-outer-container">
+    <span class="parsons-block-description">Drop blocks here</span>
+    <div class="parsons-container highlight parsons-drop-div">
+        <pre><code class="parsons-area parsons-drop-area"></code></pre>
+    </div>
+</div>
+</div>
+<div class="form-elements">
+        <input type="hidden" name="data" value=""/>
+        <pre class="parsons-answer">def teste():
+    print('abc')2
+    for i in range(10):2
+        print(i+2)2
+    return 42
+</pre>
+        <div class="ah-btn-group">
+            <input type="button" class="ah-button ah-button--borderless" name="resetButton" value="Reset"/>
+            <input type="button" class="ah-button ah-button--primary" name="sendButton" value="Test"/>
+        </div>
+        </div>
+</form>
+<div class="admonition answer no-indent">
+<p class="admonition-title">Answer</p>
+<p class="wrong-answer">Wrong answer</p>
+<p class="correct-answer">Correct answer</p>
+</div>
+</div>
+
+
+</section>
+          
+        
+      </main>
+      <footer class="ah-footer ah-typeset">
+        <div class="ah-footer-nav">
+          
+            <a href="../video/"
+               class="ah-prev"
+               title="Videos">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Videos</span>
+            </a>
+          
+          
+            <a href="../footnotes/"
+               class="ah-next"
+               title="Footnotes">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Footnotes</span>
+            </a>
+          
+        </div>
+      </footer>
+    </div>
+    
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script src="../../termynal.js"></script>
+    
+  <script>const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});</script></body>
+</html>
