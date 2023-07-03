@@ -63,3 +63,64 @@ Try answering the quiz bellow. Answers persist page refreshes, so students won't
     !!! answer
         Text explaining correct answer. Only shown after option is selected.
 
+### Code
+
+To add a code to the itens, you can just break a line and write down the code section, just like this:
+
+```
+!!! exercise choice
+    O código correto para a linha 8 é:
+
+    - [ ] 
+    ```c
+    if (n > 2){
+    ```  
+    - [x] 
+    ```c
+    for (i = 2; i < n; i++){
+    ```  
+    - [ ] 
+    ```c
+    for (i = 2; i < n; i++){
+        if (isPrime == 1)
+          printf ("Number %d is prime");
+        else
+          printf ("Number %d is not prime");
+    ```  
+    - [ ] 
+    ```c
+    for (i = 2; i <= n; i++){
+    ```  
+    - [ ] 
+    ```c
+    for (i = 1; i < n-1; i++){
+    ```
+```
+
+!!! exercise choice
+    O código correto para a linha 8 é:
+
+    - [ ] 
+    ```c
+    if (n > 2){
+    ```  
+    - [x] 
+    ```c
+    for (i = 2; i < n; i++){
+    ```  
+    - [ ] 
+    ```c
+    for (i = 2; i < n; i++){
+        if (isPrime == 1)
+          printf ("Number %d is prime");
+        else
+          printf ("Number %d is not prime");
+    ```  
+    - [ ] 
+    ```c
+    for (i = 2; i <= n; i++){
+    ```  
+    - [ ] 
+    ```c
+    for (i = 1; i < n-1; i++){
+    ```
