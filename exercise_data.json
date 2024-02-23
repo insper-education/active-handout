@@ -1,22 +1,6 @@
 {
   "course": "Active Handout Example 2022",
   "exercises": {
-    "reference/parsons/": {
-      "parsons_1": {
-        "tags": [
-          "reference",
-          "parsons-exercise"
-        ],
-        "slug": "reference/parsons/parsons_1"
-      },
-      "parsons_2": {
-        "tags": [
-          "reference",
-          "parsons-exercise"
-        ],
-        "slug": "reference/parsons/parsons_2"
-      }
-    },
     "reference/custom-exercise/": {
       "random-question_1": {
         "tags": [
@@ -37,47 +21,65 @@
     "reference/multiple-choice/": {
       "choice_1": {
         "tags": [
-          "choice-exercise",
-          "reference"
+          "reference",
+          "choice-exercise"
         ],
         "slug": "reference/multiple-choice/choice_1",
         "answer_idx": 2
       },
       "choice_2": {
         "tags": [
-          "choice-exercise",
-          "reference"
+          "reference",
+          "choice-exercise"
         ],
         "slug": "reference/multiple-choice/choice_2",
         "answer_idx": 2
       }
     },
+    "reference/parsons/": {
+      "parsons_1": {
+        "tags": [
+          "reference",
+          "parsons-exercise"
+        ],
+        "slug": "reference/parsons/parsons_1",
+        "answer": "def teste():\n    for i in range(10):\n        print(i+2)\n    print('abc')\n    return 4\n"
+      },
+      "parsons_2": {
+        "tags": [
+          "reference",
+          "parsons-exercise"
+        ],
+        "slug": "reference/parsons/parsons_2",
+        "answer": "def teste():\n    print('abc')2\n    for i in range(10):2\n        print(i+2)2\n    return 42\n"
+      }
+    },
     "reference/text-questions/": {
       "short_1": {
         "tags": [
+          "short-text",
           "text-exercise",
-          "reference",
-          "short-text"
+          "reference"
         ],
         "slug": "reference/text-questions/short_1"
       },
       "long_2": {
         "tags": [
           "text-exercise",
-          "long-text",
-          "reference"
+          "reference",
+          "long-text"
         ],
         "slug": "reference/text-questions/long_2"
       }
     }
   },
   "tags": {
+    "parsons-exercise": "parsons-exercise",
     "choice-exercise": "choice-exercise",
+    "short-text": "short-text",
+    "long-text": "long-text",
     "text-exercise": "text-exercise",
     "reference": "reference",
-    "random-question": "random-question",
-    "parsons-exercise": "parsons-exercise",
-    "long-text": "long-text",
-    "short-text": "short-text"
+    "random-question": "random-question"
   }
 }
