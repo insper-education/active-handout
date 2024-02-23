@@ -4,8 +4,8 @@
     "reference/custom-exercise/": {
       "random-question_1": {
         "tags": [
-          "reference",
-          "random-question"
+          "random-question",
+          "reference"
         ],
         "slug": "reference/custom-exercise/random-question_1"
       }
@@ -39,16 +39,16 @@
     "reference/parsons/": {
       "parsons_1": {
         "tags": [
-          "reference",
-          "parsons-exercise"
+          "parsons-exercise",
+          "reference"
         ],
         "slug": "reference/parsons/parsons_1",
         "answer": "def teste():\n    for i in range(10):\n        print(i+2)\n    print('abc')\n    return 4\n"
       },
       "parsons_2": {
         "tags": [
-          "reference",
-          "parsons-exercise"
+          "parsons-exercise",
+          "reference"
         ],
         "slug": "reference/parsons/parsons_2",
         "answer": "def teste():\n    print('abc')2\n    for i in range(10):2\n        print(i+2)2\n    return 42\n"
@@ -57,9 +57,9 @@
     "reference/text-questions/": {
       "short_1": {
         "tags": [
-          "short-text",
           "text-exercise",
-          "reference"
+          "reference",
+          "short-text"
         ],
         "slug": "reference/text-questions/short_1"
       },
@@ -74,12 +74,12 @@
     }
   },
   "tags": {
-    "parsons-exercise": "parsons-exercise",
-    "choice-exercise": "choice-exercise",
+    "random-question": "random-question",
     "short-text": "short-text",
     "long-text": "long-text",
+    "parsons-exercise": "parsons-exercise",
     "text-exercise": "text-exercise",
     "reference": "reference",
-    "random-question": "random-question"
+    "choice-exercise": "choice-exercise"
   }
 }
