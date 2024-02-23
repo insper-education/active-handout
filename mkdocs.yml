@@ -79,6 +79,7 @@ nav:
   - Reference:
       - reference/config.md
       - reference/syntax-highlighting/index.md
+      - reference/admonition/index.md
       - reference/tabbed-content/index.md
       - reference/basic-editing/index.md
       - reference/advanced-editing/index.md
